@@ -1,0 +1,89 @@
+.grid{
+    width:606px;
+    height:606px;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.kwadrat{
+    height:200px;
+    width:200px;
+    border:solid 1px black;
+    background-color: green;
+    border-radius: 10px;
+    
+}
+
+.kwadrat:hover{
+    scale:1.05;
+    cursor: pointer;
+}
+
+.thc{
+    background-color:green;
+    background-image: url(cana.png);
+    background-position: center;
+    background-size: cover;
+}
+
+body{
+    display:flex;
+    background-color:rgb(93, 248, 93);
+    background-image: url(tlo.png);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    padding:30px 100px;
+    font-size:24px;
+    text-shadow: 1px 1px green;
+    font-weight: bold;
+}
+
+.koniec{
+    width:66%;
+    height:66%;
+    font-size:4rem;
+    position:absolute;
+    display:none;
+    top:10%;
+    left:20%;
+    border:solid 2px black;
+    text-align: center;
+    padding-top:70px;
+    background-image: url(wieniec.png);
+    background-color: rgb(93, 248, 93);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 40px;
+    box-shadow: 0px 0px 40px 5px black;
+    font-weight: bold;
+    text-shadow: 2px 2px green;
+    
+}
+
+.koniec button{
+    width:150px;
+    height:150px;
+    position:absolute;
+    top:60%;
+    left:40%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 40px 5px black;
+    background-color: green;
+    background-image: url(lisc.png);
+    background-size: cover;
+    border:none;
+    font-weight: bold;
+    font-size:28px;
+    transition:.5s;
+    cursor: pointer;
+    text-shadow: 2px 2px green;
+}
+
+.koniec button:hover{
+    scale:1.1;
+    background-color:  rgb(93, 248, 93);
+
+}
+

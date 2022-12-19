@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="GODOFWAR.TTF">
+    <link rel="stylesheet" href="abaddon.ttf">
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
+    <title>Wiedzmin Battle</title>
+</head>
+<body>
+    <div class="header">
+        <img src="img/wisior.png">
+        <h1>WITCHER BATTLE</h1>
+        <img src="img/wisior.png">
+    </div>
+    <!-------------------------->
+    <div class="backgrounduser">
+        <div class="result">
+            <h3>Koniec Bitwy</h3>
+          <span> Kurz opadł, po strasznej bitwie Ludzie zwyciężyli zadając:<span class="resultinner"> </span>obrażeń</span>
+          <img src="img/wiedzminwinner.png">
+            <div class="continue">Walcz Dalej</div>
+        </div>
+    </div>
+    <div class="backgroundcomp">
+        <div class="result">
+            <h3>Koniec Bitwy</h3>
+          <span> Kurz opadł, po strasznej bitwie Potwory zwyciężyły zadając:<span class="resultinnerComp"> </span>obrażeń</span>
+          <img src="img/potworywin.png">
+            <div class="continueComp">Walcz Dalej</div>
+        </div>
+    </div>
+    <div class="backgroundarena">
+        <div class="choicearena">
+            <h1>WYLOSUJ ARENE</h1>
+            <button type="submit" class="btnok">OK</button>
+        </div>
+    </div>
+    <div class="backgroundpostac">
+        <div class="choicearena">
+            <h1>WYBIERZ POSTAC</h1>
+            <button type="submit" class="btnokU">OK</button>
+        </div>
+    </div>
+    <div class="backgroundstwor">
+        <div class="choicearena">
+            <h1>WYBIERZ STWORA</h1>
+            <button type="submit" class="btnokC">OK</button>
+        </div>
+    </div>
+    <div class="winneruser">
+        <div class="winnerresult">
+            <img class="img2" src="img/wiedzminkarty.png">
+            <h1>GRATULACJE</h1>
+            <p>Gratulacje Ludzie zwyciężyli , pokonujac Dzikiego Gona .
+                Geralt może w końcu zająć sie swoimi ulubionymi zajęciami, seksem bez zoobowiązań i upijaniem się wysokoprocentowymi wywarami.
+            </p>
+            <button type="submit" class="btnonemore">JESZCZE RAZ</button>
+        </div>
+    </div>
+    <div class="winnercomp">
+        <div class="winnerresult">
+            <img class="img2" src="img/crry.png">
+            <h1>GRATULACJE</h1>
+            <p>Gratulacje Potwory zwyciężyły , pokonujac ludzi .
+                Dziki Gon zabił wszystkich ludzi i zniszczył cały świat. Teraz to wsumie nie ma już nic do roboty.
+            </p>
+            <button type="submit" class="btnonemoreC">JESZCZE RAZ</button>
+        </div>
+    </div>
+    <!----------------------------------------------------->
+    <div class="container">
+        <div class="box player oponent">
+            <div class="health ">
+                <h1>ŻYCIE:<span class="zyciecomp">100</span></h1>
+            </div>
+            <div class="imagebox comp">
+                <img class="imgcomp" src="img/wilczak.png">
+            </div>
+            <div class="name comp">
+                Wybierz Stwora
+            </div>
+            <div class="atackspan">ATAK</div>
+            <div class="atack">
+                <img src="img/sword.png">
+                <div class="atackinner comp">0</div>
+                <img src="img/sword.png">
+            </div>
+            <div class="comptable">
+                
+            </div>
+        </div>
+        <!--------------------------------------------------->
+        <div class="box battleArea">
+            <div class="arenabottom">               
+                <div class="btnFight"><span class="btnFightbtn">WALKA</span></div>
+            </div>
+            <img class="imgArena" src="">
+            <div class="Arena">
+                <img src="img/znaki.png">
+                <div class="btnArena"> <h1>LOSUJ ARENE</h1></div>
+                <img src="img/znaki.png">
+            </div>
+            
+        </div>
+        <!------U S E R-------------------------------------->
+
+        <div class="box player user">
+            <div class="health user">
+                <h1>ŻYCIE:<span class="zycieuser">100</span></h1>
+            </div>
+            <div class="imagebox user">
+                <img class="imguser" src="img/wilczak.png">
+            </div>
+            <div class="name user">
+                Wybierz Postać
+            </div>
+            <div class="atackspan">ATAK</div>
+            <div class="atack">
+                <img src="img/sword.png">
+                <div class="atackinner user">0</div>
+                <img src="img/sword.png">                
+            </div>
+            <div class="usertable">
+                
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

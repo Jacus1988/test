@@ -1,0 +1,654 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: aba;
+    src: url(abaddon.ttf);
+}
+
+@font-face{
+    font-family: god;
+    src: url(GODOFWAR.TTF)
+}
+.openpage{
+    background-image: url(img/blood.jpg);
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+    position:relative;
+    background-position: bottom;
+}
+
+.openpage h1{
+    font-size:130px;
+    font-family: aba;
+    color:black;
+    text-shadow: 3px 3px 10px red;
+    animation: h1opacity linear 10s;
+    text-align: center;
+    padding-top:30px;
+}
+
+@keyframes h1opacity{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.redwolf{
+    position:absolute;
+    top:37%;
+    left:49%;
+    transform: translateX(-50%);
+    background-image: url(img/redwolf.png);
+    width:330px;
+    height:300px;
+    animation:redwolfvisible 20s linear;
+}
+
+@keyframes redwolfvisible {
+    0%{opacity:0}
+    50%{opacity:0}
+    100%{opacity:1}
+}
+
+.redwolf span{
+    position:absolute;
+    color:red;
+    font-size: 50px;
+    top:37%;
+    left:50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    transition:1s;
+    font-family: aba;
+    animation:spancolor 1s linear infinite alternate,spancolorvisible 23s linear ;
+}
+
+@keyframes spancolor{
+    0%{color:red;text-shadow: 2px 2px black}
+    100%{color:black;text-shadow: 2px 2px red}
+}
+
+@keyframes spancolorvisible{
+    0%{opacity: 0;}
+    33%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.redwolf span:hover{
+    font-size: 100px;
+    color:black;
+    text-shadow: 2px 2px red;
+}
+
+/* M A I N      P A G E */
+
+body{
+    background:linear-gradient(to right,black, gray, black);
+    width:100%;
+    height:100%;
+    cursor:default;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+    font-size:100px;
+    font-family: aba;
+    color:black;
+    text-shadow: 3px 3px 10px red;
+    animation: h1transform 10s linear infinite alternate;
+    
+}
+
+@keyframes h1transform {
+    0%{color:red; text-shadow: 3px 3px 10px black;}
+    100%{color:black; text-shadow: 3px 3px 10px red;}
+}
+
+.container{
+    display:flex;
+    margin:20px 0 ;
+
+}
+.box{
+    width:33%;
+    height:100vh;
+}
+
+.box .player{
+    display:flex;
+}
+
+.box.player .health{
+    font-size:28px;
+    color:black;
+    text-shadow: 2px 2px 5px red;
+    text-align: center;
+    font-family: 'Sancreek', cursive;
+    letter-spacing: 5px;
+}
+
+.health span{
+    color:green;
+}
+
+.box.player .imagebox{
+    width:170px;
+    height:170px;
+    border:1px solid red;
+    margin:10px auto;
+    box-shadow: 0 0 10px 5px black;
+    border-radius: 10px;
+}
+
+.imagebox img{
+    width:100%;
+    height:100%;
+}
+
+.box.player .name{
+    font-size:40px;
+    color:black;
+    text-shadow: 2px 2px 5px red;
+    text-align: center;
+    font-family: god;
+    padding:10px 0 ;
+}
+
+.box.player .atack{
+    display:flex;
+    justify-content: space-between;
+    margin:20px;
+}
+
+.box.player .atack .atackinner{
+    font-size: 80px;
+    color:black;
+    text-shadow: 2px 2px 5px gold;
+    font-family:'Sancreek', cursive;
+    
+}
+
+.atackspan{
+    font-size:50px;
+    color:rgb(248, 216, 134);
+    text-shadow: 2px 2px 5px black;
+    font-family: aba;
+    text-align: center;
+    padding:2px 0px;
+}
+
+/* T A B E L A */
+
+.usertable{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    flex-wrap: wrap;
+    height:200px;
+}
+
+
+.comptable{
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap:10px;
+    height:200px;
+}
+
+.userchoice{
+    width:70px;
+    height:70px;
+    border:1px solid red;
+    box-shadow: 0 0 10px 5px black;
+    background: linear-gradient(to right,red, black);
+    border-radius: 5px;
+    transition:1s;
+}
+
+.userchoice:hover{
+    scale:2;
+    cursor:pointer;
+    z-index: 1;
+}
+
+/* A R E N A */
+.Arena{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnArena{
+    width:100px;
+    height:150px;
+    background-image: url(img/shield.png);
+    background-size: cover;
+    margin:0px auto;
+    background-position: center;
+    padding:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:.5s;
+}
+
+.btnArena h1{
+    margin:0px auto;
+    color:black;
+    font-size:30px;
+    font-family: aba;
+    text-shadow: 2px 2px 3px red;
+    animation:losujbtn linear infinite alternate 1s;
+}
+
+@keyframes losujbtn{
+    from{scale:1;color:black; text-shadow: 2px 2px 3px red;}
+    to{scale:1.2;color:red; text-shadow: 2px 2px 3px black};
+}
+
+.btnArena:hover{
+   filter:brightness(120%);
+   cursor:pointer;
+   scale:1.2;
+}
+.Arena img{
+    z-index: -1;
+}
+
+.imgArena{
+    width:100%;
+    height:350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px black;
+    background-image: url(img/3glowy.png);
+    background-size: cover;
+    background-position: center;
+    outline:none;
+}
+
+.arenabottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btnFight{
+    font-size: 80px;
+    align-items: center;
+    font-family: aba;
+    font-weight: bold;
+    padding-top:50px;
+    background-image: url(img/wiedzminarena.png);
+    background-size: cover;
+    background-position: top;
+    padding-bottom:100px;
+    text-shadow: 2px 2px 5px red;
+    transition:1s;
+}
+
+.btnFight span{
+    transition:1s;
+    cursor:pointer;
+    animation:btnfightlight .5s linear alternate infinite;
+}
+
+.btnFight span:hover{
+    color:rgb(248, 216, 134);
+    text-shadow:3px 3px 5px black;
+    animation:btnfightlight none;
+}
+    
+@keyframes btnfightlight{
+    from{scale:1;color:black; text-shadow: 2px 2px 3px red;}
+    to{scale:1.2;color:red; text-shadow: 2px 2px 3px black};
+}    
+
+/* B A C K G R O U N D */
+
+.backgrounduser{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    backdrop-filter:blur(3px);
+    z-index: 2;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.backgroundcomp{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    backdrop-filter:blur(3px);
+    z-index: 2;
+    top:0;
+    left:0;
+    display:none;
+}
+
+
+.result{
+    position:relative;
+    width:600px;
+    height:400px;
+    box-shadow: 0 0 15px 5px black;
+    border-radius:15px;
+    background:linear-gradient(to right top,black, gray ,black);
+    margin:100px auto;
+    
+}
+
+.result img{
+    position:absolute;
+    bottom:3%;
+    left:3%;
+}
+
+.result h3{
+    font-size: 60px;
+    font-weight:bold;
+    font-family: god;
+    text-shadow:2px 2px 5px red;
+    text-align: center;
+    padding-top:10px;
+}
+
+.result span{
+    font-size: 34px;
+    font-weight:bold;
+    font-family: gothic;
+    text-shadow:2px 2px 5px red;
+    text-align: center;
+    margin:20px auto;
+    display:block;
+    font-family: god;
+}
+
+.continue{
+    font-size: 30px;
+    color:gold;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    font-weight: bold;
+    transition:1s;
+    font-family: god;
+
+}
+.continue:hover{
+    cursor:pointer;
+    scale:1.5;
+}
+
+.continueComp{
+    font-size: 30px;
+    color:gold;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    font-weight: bold;
+    transition:1s;
+    font-family: god;
+
+
+}
+
+.continueComp:hover{
+    cursor:pointer;
+    scale:1.5;
+}
+
+.backgroundarena{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    backdrop-filter:blur(3px);
+    z-index: 2;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.choicearena{
+    width:400px;
+    height:150px;
+    border:solid 1px black;
+    position:relative;
+    top:30%;
+    left:35%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 5px black;
+    background: linear-gradient(to right top,black, gray, black);
+}
+
+.choicearena h1{
+    font-family: god;
+    font-size: 36px;
+    color:black;
+    text-shadow: 2px 2px 5px red;
+    padding:15px 0;
+    text-align: center;
+}
+
+.btnok{
+    display:flex;
+    color:black;
+    text-shadow: 2px 2px gray;
+    border-radius: 50%;
+    font-size: 30px;
+    font-family: god;
+    background:linear-gradient(to right, red, black);
+    width:70px;
+    height:70px;
+    text-align: center;
+    margin:0 auto;
+    padding-top:17px;
+    padding-left:7px;
+    cursor:pointer;
+    transition:1s;
+    border:none;
+    box-shadow: 0 0 10px 5px black;
+}
+
+.btnok:hover{
+    background-color: black;
+    color:gold;
+    text-shadow: 2px 2px black;
+}
+
+.backgroundstwor{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    backdrop-filter:blur(3px);
+    z-index: 2;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.backgroundpostac{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    backdrop-filter:blur(3px);
+    z-index: 2;
+    top:0;
+    left:0;
+    display:none;
+
+}
+
+.btnokC{
+    display:flex;
+    color:black;
+    text-shadow: 2px 2px gray;
+    border-radius: 50%;
+    font-size: 30px;
+    font-family: god;
+    background:linear-gradient(to right, red, black);
+    width:70px;
+    height:70px;
+    text-align: center;
+    margin:0 auto;
+    padding-top:17px;
+    padding-left:7px;
+    cursor:pointer;
+    transition:1s;
+    border:none;
+    box-shadow: 0 0 10px 5px black;
+}
+
+.btnokC:hover{
+    background-color: black;
+    color:gold;
+    text-shadow: 2px 2px black;
+}
+
+.btnokU{
+    display:flex;
+    color:black;
+    text-shadow: 2px 2px gray;
+    border-radius: 50%;
+    font-size: 30px;
+    font-family: god;
+    background:linear-gradient(to right, red, black);
+    width:70px;
+    height:70px;
+    text-align: center;
+    margin:0 auto;
+    padding-top:17px;
+    padding-left:7px;
+    cursor:pointer;
+    transition:1s;
+    border:none;
+    box-shadow: 0 0 10px 5px black;
+}
+
+.btnokU:hover{
+    background-color: black;
+    color:gold;
+    text-shadow: 2px 2px black;
+}
+
+.winneruser{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    backdrop-filter:blur(3px);
+    z-index: 2;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.winnerresult{
+    position:relative;
+    width:600px;
+    height:400px;
+    box-shadow: 0 0 15px 5px black;
+    border-radius:15px;
+    background:linear-gradient(to right top,black, gray ,black);
+    margin:100px auto;
+}
+
+.winnerresult h1{
+    text-align: center;
+    font-family: god;
+    text-shadow: 2px 2px 5px red;
+    font-size: 60px;
+    padding:15px 0;
+    
+}
+
+.winnerresult img{
+    width:150px;
+    height:150px;
+    
+}
+
+.winnerresult .img2{
+    position:absolute;
+    bottom:0%;
+    right:3%;
+
+}
+
+.winnerresult p{
+    font-size:28px;
+    text-align: center;
+    padding:10px 20px;
+    font-family: god;
+    font-weight: bold;
+    text-shadow:1px 1px red;
+}
+
+.btnonemore{
+    position:absolute;
+    width:170px;
+    height:70px;
+    bottom:8%;
+    left:20%;
+    color:gold;
+    font-size: 24px;
+    text-shadow:2px 2px 3px black;
+    background:linear-gradient(to right, red, black);
+    font-family: god;
+    font-weight: bold;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 0 0 10px 5px black;
+    cursor:pointer;
+    transition:1s;
+}
+
+.btnonemore:hover{
+    background:linear-gradient(to right, gold, black);
+    color:black;
+    text-shadow: 2px 2px 3px red;
+}
+
+.winnercomp{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    backdrop-filter:blur(3px);
+    z-index: 2;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.btnonemoreC{
+    position:absolute;
+    width:170px;
+    height:70px;
+    bottom:8%;
+    left:20%;
+    color:gold;
+    font-size: 24px;
+    text-shadow:2px 2px 3px black;
+    background:linear-gradient(to right, red, black);
+    font-family: god;
+    font-weight: bold;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 0 0 10px 5px black;
+    cursor:pointer;
+    transition:1s;
+}
+
+.btnonemoreC:hover{
+    background:linear-gradient(to right, gold, black);
+    color:black;
+    text-shadow: 2px 2px 3px red;
+}

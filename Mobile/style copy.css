@@ -1,0 +1,372 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: new;
+    src: url(/Mobile/fonts/octin\ prison\ free.ttf);
+}
+
+@font-face {
+    font-family: head;
+    src: url(/Mobile/fonts/RACE1\ Brannt\ Plus\ Chiseled\ NCV.ttf);
+}
+
+@font-face {
+    font-family: god;
+    src: url(/Mobile/fonts/GODOFWAR.TTF);
+}
+
+body{
+    background-color: #000;
+    cursor:default;
+}
+
+:root{
+    --blue:#004DFF;
+}
+
+/*   Navigation */
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+    padding:15px;
+}
+
+.logo a{
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo a:hover h1{
+    color:var(--blue);
+    text-shadow: 3px 3px 2px #000;
+}
+
+.logo img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px var(--blue);
+}
+
+.logo h1{
+    font-family:head;
+    font-size: 3rem;
+    color:#fff;
+    text-shadow: -3px -3px 2px var(--blue);
+    padding:0 20px;
+    transition:.5s;
+}
+
+.menu{
+    display:flex;
+    align-items: center;
+}
+.menu ul{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-family: new;
+    padding:0 10px;
+    font-size: 1.3rem;
+    color:#fff;
+    transition:.3s;
+    position:relative;
+}
+
+.menu ul li a:hover{
+    color:var(--blue);   
+}
+
+.menu ul li a:hover::after{
+    width:100%;
+    transition:.3s;
+}
+
+
+.menu ul li a::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0%;
+    height:2px;
+    background-color: var(--blue);
+    width:0%;
+}
+
+/* Hamburger */
+
+.hamburger{
+    width:80px;
+    height:80px;
+    border-radius:10px;
+    cursor:pointer;
+    display:none;
+}
+
+.bar{
+    display:block;
+    width:85%;
+    background-color: #000;
+    height:5px;
+    margin:14px auto;
+    border-radius:10px;
+    transition:.3s;
+
+}
+
+.hamburger.active .bar:first-child{
+    transform:translateY(18px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity:0;
+}
+.hamburger.active .bar:last-child{
+    transform:translateY(-18px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobile-menu.active{
+    transform: translatex(0%);
+    transition:1s;
+}
+.mobile-menu{
+    position:absolute;
+    top:100px;
+    left:0;
+    width:100%;
+    transform: translateX(100%);
+    display:none;
+}
+
+.mobile-menu ul{
+    background-color: #000;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px 0;
+    box-shadow: 0 0 10px 5px #000;
+}
+
+.mobile-menu ul li{
+    width:70%;
+    padding:10px 0;
+    border-top: 2px solid var(--blue);
+    text-align: center;
+}
+
+.mobile-menu ul li:first-child{
+    border-top:none;
+}
+
+.mobile-menu ul li a{
+    font-family: new;
+    font-size: 1.5rem;
+    color:var(--blue);
+    text-decoration:none;
+}
+
+.mobile-menu ul li a:hover{
+    font-family: new;
+    font-size: 1.5rem;
+    color:#fff;
+    text-decoration:none;
+    cursor:pointer;
+}
+/* Grid Container  */
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    gap:45px;
+    margin: 100px 30px ;
+}
+
+.content{
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px var(--blue);
+}
+
+.content:hover{
+    cursor:pointer;
+    filter:brightness(0.6);
+}
+
+.content:hover h1{
+    color:#004DFF;
+    text-shadow: 1px 1px #000;
+}
+
+.content a{
+    display:block;
+    width:100%;
+    height:100%;
+    text-decoration: none;
+}
+
+.content.one{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url(/Mobile/img/team.jpg);
+}
+
+.content.two{
+    background-image: url(/Mobile/img/kontrakty.jpg);
+}
+
+.content.thre{
+    background-image: url(/Mobile/img/squad.jpg);
+}
+
+.content.four{
+    background-image: url(/Mobile/img/hala.jpg);
+}
+
+.content.five{
+    background-image: url(/Mobile/img/kontakt.jpg);
+}
+    
+.content h1{
+    display:flex;
+    font-size: 2.3rem;
+    font-family: new;
+    color:black;
+    padding:10px;
+    text-shadow: 1px 1px var(--blue);
+}
+
+/* Footer */
+
+.logodevs{
+    font-family: god;
+    color:white;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+}
+.logodevs::first-letter{
+    font-size: 48px;
+    color:black;
+}
+
+.d{
+    font-size: 48px;
+    transform:rotate(-20deg);
+    display:inline-block;
+    color:red;
+}
+span{
+    font-size: 30px;
+    font-family: god;
+    color:black;
+}
+
+footer{
+    background:linear-gradient(to bottom, #000,var(--blue) );
+    padding:30px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.icon-foot{
+    display:flex;
+    justify-content: space-between;
+}
+
+.icon-foot img{
+    margin:0 15px;
+}
+
+.icon-foot img:hover{
+    cursor:pointer;
+    filter: contrast(0.7);
+}
+
+.copyright{
+    font-family:new;
+    justify-items: center;
+}
+
+@media(max-width:1200px){
+    .logo h1{
+        display:none;
+    }
+}
+
+@media(max-width:900px){
+    footer{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .copyright{
+        padding:20px 0;
+    }
+    .grid-container{
+        display:block;
+    }
+    .content{
+        margin:50px 0;
+    }
+    
+}
+
+@media(max-width:761px){
+    .nav {
+        position:fixed;
+        top:0;
+        left:0;
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+        padding:10px;
+        z-index: 882;
+        background:linear-gradient(to bottom, var(--blue),#000);
+        box-shadow:0 0 10px 5px #000;
+    }
+
+    .logo h1{
+        display:block;
+        font-size: 2rem;
+    }
+    .grid-container{
+        padding-top: 30px;
+    }
+
+    .nav .menu{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+    .mobile-menu{
+        display:block;
+    }
+    .logo img{
+        width:80px;
+        height:80px;
+    }
+}
+
+@media(max-width:471px){
+    .logo h1{
+        display:none;
+    }
+}

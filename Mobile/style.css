@@ -197,6 +197,10 @@ body{
     margin: 100px 30px ;
 }
 
+.grid-container a{
+    text-decoration: none;
+}
+
 .content{
     min-height: 300px;
     background-position: center;
@@ -222,7 +226,7 @@ body{
     text-decoration: none;
 }
 
-.content.one{
+.grid-container .one{
     grid-column-start: 1;
     grid-column-end: 3;
     background-image: url(../Mobile/img/team.jpg);
@@ -304,10 +308,14 @@ footer{
     justify-items: center;
 }
 
+/*  M E D I A */
+
+
 @media(max-width:1200px){
     .logo h1{
         display:none;
     }
+    
 }
 
 @media(max-width:900px){
@@ -326,6 +334,7 @@ footer{
     .content{
         margin:50px 0;
     }
+    
     
 }
 
@@ -364,10 +373,88 @@ footer{
         width:80px;
         height:80px;
     }
+    
 }
 
 @media(max-width:471px){
     .logo h1{
         display:none;
     }
+   
 }
+
+/* ---------------O NAS ---------------- */
+
+.about{
+    padding-top:100px;
+}
+
+.about-logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-logo img{
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px var(--blue);
+    width:100px;
+    height:100px;
+}
+
+.about-logo h1{
+    font-family: head;
+    font-size: 3rem;
+    color:white;
+    padding:0 30px;
+}
+
+/* -------------- K O N T A K T ------------------ */
+
+.kontakt-container{
+    padding-top: 130px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kontakt-container h1{
+    font-family: head;
+    font-size:3rem;
+    color:var(--blue);
+    text-align: center;
+}
+
+.kontakt-container ul{
+    padding:30px 0;
+    list-style-type: none;
+
+}
+
+.kontakt-container ul li{
+    padding:15px 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontakt-container ul li a img{
+    padding-right:10px;
+}
+
+.kontakt-container ul li a{
+    text-decoration: none;
+    font-family: new;
+    font-size:1.5rem;
+    color:var(--blue);
+    display:flex;
+    align-items: center;
+}
+
+.kontakt-container ul li a:hover{
+    color:#fff;
+}
+    
+    
+

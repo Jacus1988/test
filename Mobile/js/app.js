@@ -1,8 +1,11 @@
 const hamburger = document.querySelector('.hamburger')
 const mobileMenu = document.querySelector('.mobile-menu')
 
+
+
 hamburger.classList.remove('active')
 mobileMenu.classList.remove('active')
+
 
 hamburger.addEventListener('click',() => {
     

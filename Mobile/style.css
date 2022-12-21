@@ -149,6 +149,7 @@ body{
     width:100%;
     transform: translateX(100%);
     display:none;
+    transition:1s;
 }
 
 .mobile-menu ul{

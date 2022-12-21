@@ -7,17 +7,17 @@
 
 @font-face {
     font-family: new;
-    src: url(/Mobile/fonts/octin\ prison\ free.ttf);
+    src: url(../Mobile/fonts/octin\ prison\ free.ttf);
 }
 
 @font-face {
     font-family: head;
-    src: url(/Mobile/fonts/RACE1\ Brannt\ Plus\ Chiseled\ NCV.ttf);
+    src: url(../Mobile/fonts/RACE1\ Brannt\ Plus\ Chiseled\ NCV.ttf);
 }
 
 @font-face {
     font-family: god;
-    src: url(/Mobile/fonts/GODOFWAR.TTF);
+    src: url(../Mobile/fonts/GODOFWAR.TTF);
 }
 
 body{
@@ -224,23 +224,23 @@ body{
 .content.one{
     grid-column-start: 1;
     grid-column-end: 3;
-    background-image: url(/Mobile/img/team.jpg);
+    background-image: url(../Mobile/img/team.jpg);
 }
 
 .content.two{
-    background-image: url(/Mobile/img/kontrakty.jpg);
+    background-image: url(../Mobile/img/kontrakty.jpg);
 }
 
 .content.thre{
-    background-image: url(/Mobile/img/squad.jpg);
+    background-image: url(../Mobile/img/squad.jpg);
 }
 
 .content.four{
-    background-image: url(/Mobile/img/hala.jpg);
+    background-image: url(../Mobile/img/hala.jpg);
 }
 
 .content.five{
-    background-image: url(/Mobile/img/kontakt.jpg);
+    background-image: url(../Mobile/img/kontakt.jpg);
 }
     
 .content h1{

@@ -148,6 +148,7 @@ body{
     left:0;
     width:100%;
     transform: translateX(100%);
+    display:none;
 }
 
 .mobile-menu ul{
@@ -355,7 +356,9 @@ footer{
     .hamburger{
         display:block;
     }
-
+    .mobile-menu{
+        display:block;
+    }
     .logo img{
         width:80px;
         height:80px;

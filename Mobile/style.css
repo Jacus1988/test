@@ -351,7 +351,9 @@ footer{
         background:linear-gradient(to bottom, var(--blue),#000);
         box-shadow:0 0 10px 5px #000;
     }
-
+    .about-logo img{
+        display:none;
+    }
     .logo h1{
         display:block;
         font-size: 2rem;

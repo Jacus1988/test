@@ -119,7 +119,7 @@ body{
     display:block;
     width:85%;
     background-color: #000;
-    height:5px;
+    height:6px;
     margin:14px auto;
     border-radius:10px;
     transition:.3s;
@@ -127,14 +127,14 @@ body{
 }
 
 .hamburger.active .bar:first-child{
-    transform:translateY(18px) rotate(45deg);
+    transform:translateY(20px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(2){
     opacity:0;
 }
 .hamburger.active .bar:last-child{
-    transform:translateY(-18px) rotate(-45deg);
+    transform:translateY(-20px) rotate(-45deg);
 }
 
 /* Mobile Menu */
@@ -424,7 +424,7 @@ footer{
 .kontakt-container ul li a{
     text-decoration: none;
     font-family: new;
-    font-size:1.5rem;
+    font-size:1.3rem;
     color:var(--blue);
     display:flex;
     align-items: center;
@@ -434,5 +434,74 @@ footer{
     color:#fff;
 }
     
-    
+   /* ----------- Z E S P O L ------------------------- */
+   
+.team-container{
+    padding:130px 10px 20px 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-logo img{
+    width:60px;
+    height:60px;
+    margin:0 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px var(--blue);
+}
+
+.team-logo h1{
+    font-family: head;
+    font-size: 2rem;
+    color:#fff;
+    text-shadow: 1px 1px 3px var(--blue);
+}
+
+.team-list img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    margin-right:15px;
+}
+
+.team-list ul{
+    padding:20px;
+}
+
+.team-list ul li {
+    display:flex;
+    justify-content: space-between;
+    font-family: new;
+    font-size: 1.9rem;
+    text-align: center;
+    padding:15px 0;
+    color:var(--blue);
+}
+
+.team-list span{
+    color:#fff;
+    display: flex;
+    align-items: center;
+    padding:0 15px;
+    font-family: new;
+}
+
+.team-list ul li a{
+    color:var(--blue);
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+.team-list ul-li a:hover{
+    color:#fff;
+}
+
 

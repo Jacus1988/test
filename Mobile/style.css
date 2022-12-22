@@ -412,7 +412,7 @@ footer{
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 30px 0;
 }
 
 .onas-logo img{
@@ -428,6 +428,56 @@ footer{
     font-size: 2rem;
     color:#fff;
     text-shadow: 1px 1px 3px var(--blue);
+}
+
+.onas-left{ 
+    margin:20px;   
+    border-radius: 10px;
+    font-family: new;
+    color:#fff;
+    font-size: 1.7rem;
+}
+
+.onas-right{
+    margin:20px;
+    border-radius: 10px;
+    font-family: new;
+    color:#fff;
+    font-size: 1.7rem;
+}
+
+
+.onas-left .img-left{
+    float:left;
+    width:170px;
+    height:170px;
+    background-size: cover;
+    box-shadow: 0 0 5px 5px var(--blue);
+    border-radius: 10px;
+    margin-right:10px;
+}
+
+
+.onas-right .img-right{
+    float:right;
+    width:170px;
+    height:170px;
+    background-size: cover;
+    box-shadow: 0 0 5px 5px var(--blue);
+    border-radius: 10px;
+    margin-left:10px;
+}
+
+.left-one{
+    background-image: url(../Mobile/img/druzynamakolowiec.jpg);
+}
+
+.right-one{
+    background-image: url(../Mobile/img/lawka.jpg);
+}
+
+.left-two{
+    background-image: url(../Mobile/img/duet.jpg);
 }
 
 /* -------------- K O N T A K T ------------------ */

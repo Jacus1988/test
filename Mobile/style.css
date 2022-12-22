@@ -118,6 +118,7 @@ body{
     border-radius:10px;
     cursor:pointer;
     display:none;
+    
 }
 
 .bar{
@@ -146,13 +147,14 @@ body{
 .mobile-menu.active{
     transform: translatex(0%);
     transition:1s;
+    
 }
 .mobile-menu{
     position:absolute;
     top:100px;
     left:0;
     width:100%;
-    transform: translateX(100%);
+    transform: translateX(110%);
     display:none;
     
 }
@@ -165,6 +167,7 @@ body{
     align-items: center;
     padding:10px 0;
     box-shadow: 0 0 10px 5px #000;
+    
 }
 
 .mobile-menu ul li{
@@ -389,8 +392,43 @@ footer{
 }
 
 /* ---------------O NAS ---------------- */
+.onas-container{
+    padding-top:130px;
+    display: flex;
+    flex-direction: column;
+}
 
+.img-onas{
+    background-image: url(../Mobile/img/team.jpg);
+    min-height: 300px;
+    margin:0 20px;
+    box-shadow: 0 0 5px 5px var(--blue);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
 
+.onas-logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.onas-logo img{
+    width:60px;
+    height:60px;
+    margin:0 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px var(--blue);
+}
+
+.onas-logo h1{
+    font-family: head;
+    font-size: 2rem;
+    color:#fff;
+    text-shadow: 1px 1px 3px var(--blue);
+}
 
 /* -------------- K O N T A K T ------------------ */
 
@@ -572,4 +610,14 @@ footer{
 
 .img-five{
     background-image: url(../Mobile/img/pablo.jpg);
+}
+
+.img-six{
+    background-image: url(../Mobile/img/szostka.jpg);
+    background-position: top center;
+}
+
+.img-seven{
+    background-image: url(../Mobile/img/ariel.jpg);
+    background-position: top;
 }

@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+@font-face {
+    font-family: aaa;
+    src: url(../MobileWeed/fonts/Newton\ Howard\ Font\ Italic.otf);
+}
+
+.container h1{
+    padding:10px 0 ;
+    font-family: aaa;
+    font-size: 3.5rem;
+    text-align: center;
+    color:darkgreen;
+    text-shadow: 2px 2px 5px black;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../MobileWeed/img/background.png);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:100%;
+    background-color: lightgreen;
+}
+
+.result-container{
+    font-family: aaa;
+    font-size: 1.5rem;
+    text-align: center;
+    margin:10px 0;
+    text-shadow:1px 1px darkgreen;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    gap:5px;
+    width:350px;
+    height:350px;
+}
+
+.kwadrat{
+    width:90px;
+    height:90px;
+    background-color: green;
+    border:1px solid black;
+    border-radius:10px;
+    box-shadow: 0 0 15px 5px black;
+}
+
+.thc{
+    background-color: green;
+    background-image:url(../MobileWeed/img/thc.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.end{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    backdrop-filter: blur(3px);
+    display:none;
+}
+
+.endtext{
+    position:absolute;
+    top:20%;
+    left:5%;
+    width:90%;
+    height:50%;
+    box-shadow: 0 0 15px 5px black;
+    background-color: lightgreen;
+    background-image: url(../MobileWeed/img/background.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px black;
+    color:black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn{
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px black;
+    background-color: darkgreen;
+    border:none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top:20px;
+}

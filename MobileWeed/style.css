@@ -9,6 +9,14 @@
     src: url(../MobileWeed/fonts/Newton\ Howard\ Font\ Italic.otf);
 }
 
+body{
+    background-image: url(../MobileWeed/img/background.png);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:100%;
+    background-color: lightgreen;
+}
 .container h1{
     padding:10px 0 ;
     font-family: aaa;
@@ -21,13 +29,13 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-image: url(../MobileWeed/img/background.png);
     background-size: cover;
     background-position: center;
     width:100%;
-    height:100%;
-    background-color: lightgreen;
+    height:100vh;
+    
 }
 
 .result-container{
@@ -48,8 +56,8 @@
 }
 
 .kwadrat{
-    width:90px;
-    height:90px;
+    width:100px;
+    height:100px;
     background-color: green;
     border:1px solid black;
     border-radius:10px;
@@ -93,7 +101,7 @@
 
 .text{
     font-family:'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-shadow: 1px 1px 3px black;
     color:black;
     text-align: center;
@@ -101,14 +109,25 @@
 }
 
 .btn{
-    width:70px;
-    height:70px;
+    width:90px;
+    height:90px;
     border-radius: 50%;
     box-shadow: 0 0 10px 5px black;
     background-color: darkgreen;
     border:none;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-top:20px;
+    margin-top:30px;
+    animation:kolor .5s linear infinite alternate;
+    background-image: url(../MobileWeed/img/weed.png);
+    background-size: cover;
+    background-position: center;
 }
+
+@keyframes kolor {
+    from{background-color: darkgreen;scale: 1;}
+    to{background-color: lightgreen;scale:1.3;}
+}
+
+    

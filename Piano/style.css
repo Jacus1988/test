@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    cursor:default;
+    padding:10px;
+}
+/* LOGO */
+.logo{
+    font-family: god;
+    color:white;
+    font-size: 22px;
+    text-shadow: 2px 2px 5px black;
+    user-select: none;
+}
+.logo::first-letter{
+    font-size: 40px;
+    color:black;
+}
+
+.d{
+    font-size: 40px;
+    transform:rotate(-20deg);
+    display:inline-block;
+    color:red;
+}
+ span{
+    color:black;
+}
+
+@font-face {
+    font-family: god;
+    src: url(../Piano/GODOFWAR.TTF);
+}
+
+/* WRAPPER */
+
+.wrapper{
+    padding:10px;
+    background-color: #141414;
+    padding:35px 45px;
+    border-radius: 20px;
+}
+
+.wrapper header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.column{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column span{
+    color:white;
+    padding:10px;
+    font-size:20px;
+    user-select: none;
+}
+
+.volume-slider input{
+    accent-color: #fff;
+    cursor:pointer;
+}
+
+.check-box input{
+    width:60px;
+    height:30px;
+    background-color:#4b4b4b;
+    appearance: none;
+    border-radius: 20px;
+    position:relative;
+    outline:none;
+}
+
+.check-box input::before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color:#141414;
+    top:50%;
+    left:5px;
+    transform: translateY(-50%);
+    transition:all .3s ease;
+    cursor:pointer;
+}
+
+.check-box input:checked::before{
+    background-color: #fff;
+    left:35px;
+}
+
+.piano-keys{
+    margin-top:40px;
+    list-style: none;
+    display:flex;
+}
+
+.piano-keys .key{
+    text-transform: uppercase;
+    cursor:pointer;
+    position:relative;
+    color:#fff;
+}
+
+.key.white{
+    width:70px;
+    height:230px;
+    border-radius: 10px;
+    background:linear-gradient(#fff 96%, #eee 4% );
+    border:1px solid #000;
+}
+
+.piano-keys .white.active{
+    background: linear-gradient(to bottom,#fff 0%, #eee 100%);
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.key.black{
+    width:46px;
+    height:130px;
+    border-radius: 10px;
+    background:linear-gradient(#333, #000 );
+    z-index: 2;
+    margin:0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px ;
+}
+
+.piano-keys .black.active{
+    background: linear-gradient(to bottom,#000 0%, #141414 100%);
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.key.black span{
+    color:white;
+}
+    
+.key span{
+    position:absolute;
+    bottom:5px;
+    font-weight: bold;
+    font-size: 2rem;
+    width:100%;
+    text-align: center;
+    user-select: none;
+}
+
+.piano-keys .key.hide span{
+    display:none;
+}
+
+@media(max-width:820px){
+    .wrapper{
+        padding:20px;
+    }
+    header :where(.column){
+        margin-bottom:15px;
+    }
+    header{
+        display:flex;
+        flex-direction: column;
+    }
+    .volume-slider{
+        max-width:100px;
+    }
+    .piano-keys{
+        margin-top:20px;
+    }
+    .piano-keys .key:where(:nth-child(9),:nth-child(10)){
+        display:none;
+    }
+    .piano-keys .black{
+        width:40px;
+        height:100px;
+        margin:0 -20px 0 -20px;
+    }
+    .piano-keys .white{
+        width:60px;
+        height:180px;
+    }
+}
+@media(max-width:615px){
+    .piano-keys .key:nth-child(13),
+    .piano-keys .key:nth-child(14),
+    .piano-keys .key:nth-child(15),
+    .piano-keys .key:nth-child(16),
+    .piano-keys .key:nth-child(17){
+        display:none;
+    }
+    .piano-keys .white{
+        width:50px;
+    }
+}

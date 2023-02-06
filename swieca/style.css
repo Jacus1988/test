@@ -1,0 +1,277 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+body{
+    font-family: 'Dancing Script', cursive;
+    background-color: black;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 50px;
+    background-color: black;
+    z-index: 1;
+    position:relative;
+}
+.logo-mobile{
+    display:none;
+}
+.logo-mobile a{
+    text-decoration: none;
+}
+.logo-mobile span{
+    font-size: 40px;
+    font-weight: bold;
+    color:red;
+    text-shadow: 1px 1px 2px gold;
+}
+.logo-mobile img{
+    margin:0 -5px;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo span{
+    font-size: 40px;
+    font-weight: bold;
+    color:red;
+    text-shadow: 1px 1px 2px gold;
+}
+.logo img{
+    margin:0 -5px;
+}
+.material-icons.home{
+    cursor:pointer;
+    color:red;
+    transition:all 0.5s ease-in-out;
+}
+.material-icons.home:hover{
+    color:gold;
+}
+.home-mobile{
+    transition:all 0.5s ease-in-out;
+    display: block;
+}
+.home-mobile:hover{
+    color:gold;
+}
+/* --------HAMBURGER------------ */
+.hamburger{
+    width:50px;
+    height:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor:pointer;
+}
+.mobile-layout{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    padding:5px 10px;
+    align-items: center;
+    display:none;
+    
+}
+.hamburger-mobile{
+    width:50px;
+    height:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor:pointer;
+    
+}   
+.hamburger-mobile:hover .bar{
+    background-color:gold;
+}
+.hamburger:hover .bar{
+    background-color:gold;
+}
+.bar{
+    height:5px;
+    width:90%;
+    background-color: red;
+    border-radius: 10px;
+    transition:all 0.3s ease-in-out;
+}
+.hamburger-mobile.active .bar:first-child{
+    transform:translateY(20px) rotate(45deg);
+}
+.hamburger-mobile.active .bar:nth-child(2){
+    display:none;
+}
+.hamburger-mobile.active .bar:last-child{
+    transform:translateY(-15px) rotate(-45deg);
+}
+.hamburger.active .bar:first-child{
+    transform:translateY(20px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2){
+    display:none;
+}
+.hamburger.active .bar:last-child{
+    transform:translateY(-15px) rotate(-45deg);
+}
+/* ---------sections---------------- */
+.section-menu{
+    background-color: black;
+    padding:10px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:absolute;
+    width:100%;
+    transform:translateY(-100%);
+    transition: all 0.5s linear;
+}
+.section-menu.active{
+    transform:translateY(0)
+}
+.material-icons{
+    color:red;
+}
+.section-menu .section span{
+    transition:all 0.3s ease-in-out;
+}
+.section-menu .section:hover span{
+    color:gold;
+}
+.section-menu .contact{
+    border-right:1px solid red;
+    line-height:50px;
+    padding-right:100px;
+}
+.section-menu .order{
+    border-left:1px solid red;
+    line-height: 50px;
+    padding-left: 100px;
+}
+.section-menu span{
+    color:red;
+    font-size: 30px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+/* ---------MAIN------------ */
+.main-container{
+    display:flex;
+    height:100%;
+    padding:50px 70px;
+    background-color: black;
+}
+.main-about{
+    margin-top:30px;
+    background: url(./images/big_candle.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.main-about p{
+    width:70%;
+    padding-top:10px;
+    color:red;
+    font-size: 1.4rem;
+    text-indent: 30px;
+}
+/* -----------footer========== */
+footer{
+    display:flex;
+    justify-content: space-between;
+    width:90%;
+    margin:20px auto;
+    border-top:1px solid red;
+    background-color: black;
+}
+footer span{
+    color:red;
+    font-size: 28px;
+    margin-top: 10px;
+}
+.social{
+    display:flex;
+    margin-top: 10px;
+}
+.social i{
+    color:red;
+    font-size: 40px;
+    margin:0 10px;
+    cursor:pointer;
+    transition:0.5s ease-in-out;
+    border-radius: 5px;
+}
+.icon-facebook:hover{
+    color:blue;
+}
+.icon-youtube:hover{
+    background-color: white;
+}
+.icon-twitter:hover{
+    color:lightskyblue;
+}
+.icon-gmail:hover{
+    color:white;
+}
+@media (max-width:1100px) {
+    .section-menu .contact{
+        border:none;
+        padding-right:0px;
+    }
+    .section-menu .order{
+        border:none;
+        padding-left: 0px;
+    }
+}
+@media(max-width:880px){
+    .section-menu{
+        flex-direction: column;
+        padding:5px 0;
+    }
+    .section{
+        padding:15px 0;
+        border-top:1px dashed red;
+        border-bottom:1px dashed red;
+    }
+    .main-about p{
+        width:90%;
+    }
+}
+@media(max-width:500px){
+    nav{
+        flex-direction: column;
+    }
+    .hamburger{
+        display:none;
+    }
+    nav i.home{
+        display:none;
+    }
+    .mobile-layout{
+        display:block;
+        display:flex;
+    }
+    .logo-mobile{
+        display:flex;
+    }
+    .logo{
+        display:none;
+    }
+    .main-about p{
+        width:100%;
+        margin-top:0px;
+        padding-top:0px;
+    }
+    .main-container{
+        padding:10px 40px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

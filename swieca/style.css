@@ -260,9 +260,9 @@ footer span{
     align-items: center;
     border-radius: 50px;
     transform: rotate(10deg);
-    font-size: 1.8rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-family: 'Courgette', cursive;
+    font-weight: bold;
     box-shadow: 0 0 10px 5px gold;
  }   
 .item-tittle{
@@ -270,6 +270,7 @@ footer span{
     color:red;
     font-size: 1.8rem;
     text-shadow: 1px 1px 2px gold;
+    text-align: center;
 }
 .item-img{
     width:95%;
@@ -383,6 +384,7 @@ footer span{
     color:red;
     text-shadow: 2px 2px 2px gold;
     font-size: 2rem;
+    text-align: center;
 }
 .contact-form input{
     width:300px;
@@ -420,6 +422,7 @@ footer span{
     color:red;
     font-size: 2rem;
     padding:10px 0;
+    text-align: center;
 }
 .contact-us .us span{
     padding:30px 0;
@@ -510,6 +513,11 @@ footer span{
         color:red;
         font-size: 1.2rem;
         padding:10px 0;
+    }
+    .google-map iframe{
+        border-radius: 20px;
+        box-shadow:0 0 10px 5px red;
+        width:95%;
     }
     footer{
         flex-direction: column;

@@ -16,7 +16,7 @@ nav{
     align-items: center;
     padding:5px 50px;
     background-color: black;
-    z-index: 1;
+    z-index: 2;
     position:relative;
 }
 .logo-mobile{
@@ -135,6 +135,7 @@ nav{
     width:100%;
     transform:translateY(-100%);
     transition: all 0.5s linear;
+    z-index:1;
 }
 .section-menu.active{
     transform:translateY(0)
@@ -231,7 +232,7 @@ footer span{
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
-    padding:50px 60px;
+    padding:70px 60px;
     gap:50px;
 }
 .item-product{
@@ -244,7 +245,26 @@ footer span{
     justify-content: space-around;
     align-items: center;
     box-shadow:0 0 15px 7px red;
+    position:relative;
 }
+ .item-number{
+    position:absolute;
+    top:-50px;
+    right:-5px;
+    width:60px;
+    height:70px;
+    background-color: red;
+    color:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transform: rotate(10deg);
+    font-size: 1.8rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    box-shadow: 0 0 10px 5px gold;
+ }   
 .item-tittle{
     padding:5px;
     color:red;
@@ -292,6 +312,14 @@ footer span{
     text-align: center;
     padding-bottom:30px;
 }
+.main-order p{
+    color:red;
+    display:block;
+    width:60%;
+    font-size: 1.6rem;
+    padding-bottom:30px;
+    text-align: center;
+}
 .form-order{
     display:flex;
     flex-direction: column;
@@ -328,6 +356,81 @@ footer span{
     border:1px solid black;
     cursor:pointer;
 }
+/* ----------MAIN CONTACT---------------- */
+.main-contact{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:50px 70px;
+}
+.contact-info p{
+    width:70%;
+    text-align:center;
+    color:red;
+    font-size: 1.8rem;
+    margin:0 auto;
+    padding:20px 0;
+}
+.contact-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form label{
+    padding:7px 0;
+    color:red;
+    text-shadow: 2px 2px 2px gold;
+    font-size: 2rem;
+}
+.contact-form input{
+    width:300px;
+    height:50px;
+    border-radius:15px;
+    box-shadow: 0 0 15px 3px red;
+    background-color: gold;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:black;
+    padding-left:5px;
+    outline:none;
+    cursor:pointer;
+}
+.contact-form textarea{
+    width:300px;
+    height:150px;
+    resize: none;
+    border-radius:15px;
+    box-shadow: 0 0 15px 3px red;
+    background-color: gold;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:black;
+    padding-left:5px;
+    outline:none;
+    cursor:pointer;
+}
+.contact-us{
+    padding-top:30px;
+}
+.contact-us p{
+    color:red;
+    font-size: 2rem;
+    padding:10px 0;
+}
+.contact-us .us span{
+    padding:30px 0;
+}
+.google-map{
+    padding-top:20px;
+}
+.google-map iframe{
+    border-radius: 20px;
+    box-shadow:0 0 10px 5px red;
+}
 /* ----------MEDIA QUERIES -------------- */
 @media (max-width:1100px) {
     .section-menu .contact{
@@ -351,6 +454,11 @@ footer span{
     }
     .main-about p{
         width:90%;
+    }
+    .contact-us p{
+        color:red;
+        font-size: 1.4rem;
+        padding:10px 0;
     }
 }
 @media(max-width:500px){
@@ -380,8 +488,28 @@ footer span{
         margin-top:0px;
         padding-top:0px;
     }
+    .main-order p{
+        color:red;
+        display:block;
+        width:90%;
+        font-size: 1.4rem;
+        padding-bottom:20px;
+        text-align: center;
+    }
     .main-container{
         padding:10px 40px;
+    }
+    .contact-info p{
+        width:90%;
+        text-align:center;
+        color:red;
+        font-size: 1.4rem;
+        margin:0 auto;
+    }
+    .contact-us p{
+        color:red;
+        font-size: 1.2rem;
+        padding:10px 0;
     }
     footer{
         flex-direction: column;

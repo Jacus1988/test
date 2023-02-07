@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../fonts/css/fontello.css">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <title>Zamówienia</title>
+    <title>Kontakt</title>
 </head>
 <body>
     <header>  
@@ -37,7 +37,7 @@
         <div class="section-menu active">
             <div class="contact section">
                 <i class="material-icons email">email</i>
-               <a href="../pages/kontakt.html"><span>Kontakt</span></a>
+                <span>Kontakt</span>
             </div>
             <div class="products section">
                 <i class="material-icons">cake</i>
@@ -45,31 +45,31 @@
             </div>
             <div class="order section">
                 <i class="material-icons">star</i>
-                <span>Zamówienia</span>
+               <a href="../pages/zamówienia.html"><span>Zamówienia</span></a>
             </div>
         </div>
     </header>
     <main>
-        <div class="main-order">
-            <h1>Złóż zamówienie</h1>
-            <p>*Aby złożyć zamówienie należy koniecznie podać wszystkie dane, zamówienia bez wypełnienia wszystkich pól nie będą realizowane. W przypadku zamówienia kilku sztuk, należy numery świeczek wpisać kolejno po przecinkach.</p>
-            <form class="form-order">
-                <label for="order-number">Wpisz nr Świeczki</label>
-                <input name="order-number" type="number" placeholder="1,3,7,4...">
-                <label for="user-name">Imię</label>
-                <input name="user-name" type="text" placeholder="Jan...">
-                <label for="user-surname">Nazwisko</label>
-                <input name="user-surname" type="text" placeholder="Kowalski...">
-                <label for="user-city">Miasto </label>
-                <input name="user-city" type="text" placeholder="Tychy...">
-                <label for="user-zip-code">Kod pocztowy</label>
-                <input name="user-zip-code" type="number" placeholder="00-000...">
-                <label for="user-addres">Adres</label>
-                <input name="user-addres" type="text" placeholder="Ulica,nr bloku/nr mieszkania">
-                <label for="user-e-mail">E-mail</label>
-                <input name="user-e-mail" type="email" placeholder="Jankowalski@gmail.com...">
-                <input type="submit">
+        <div class="main-contact">
+            <span class="contact-info">
+                <p>" Jeżeli masz jakiekolwiek pytania ,napisz do nas odpowiemy najszybciej jak to tylko możliwe. "</p>
+            </span>
+            <form class="contact-form">
+                <label for="user-message">Zostaw wiadomość</label>
+                <textarea name="user-message" cols="30" rows="10" placeholder="ABC..."></textarea>
+                <label for="user-email">Podaj swój adres email</label>
+                <input name="user-email" type="email" placeholder="Jankowalski@gmail.com...">
+                <label for="user-number">Podaj numer telefonu</label>
+                <input name="user-number" type="number" placeholder="999 999 999...">
             </form>
+            <div class="contact-us">
+                <p>Adres: ul.Jasna 13, Świeczkowo 14-130 </p>
+                <p>Telefon: 700 700 700</p>
+                <p>E-mail: Świeczka@gmail.com</p>
+            </div>
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30504.008945943096!2d37.54207083845256!3d-17.12144478331598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18cde6e8fa5fc985%3A0xa0c78279bf790e7e!2sAdiba%2C%20Mozambik!5e0!3m2!1spl!2spl!4v1675776796910!5m2!1spl!2spl" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </main>
     <footer>

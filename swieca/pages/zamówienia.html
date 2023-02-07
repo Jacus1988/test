@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../fonts/css/fontello.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>Zamówienia</title>
+</head>
+<body>
+    <header>  
+        <nav>
+            <div class="logo-mobile">
+                <span>Św</span><img src="../images/candle-logo.png" alt=""><span>eczka.pl</span>
+            </div>
+            <div class="mobile-layout">
+                <a href="../index.html"><i class="material-icons home-mobile" style="font-size:50px">home</i></a>
+                <div class="hamburger-mobile active">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+          <a href="../index.html"><i class="material-icons home" style="font-size:50px">home</i></a>     
+            <div class="logo">
+                <span>Św</span><img src="../images/candle-logo.png" alt=""><span>eczka.pl</span>
+            </div>
+            <div class="hamburger active">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <div class="section-menu active">
+            <div class="contact section">
+                <i class="material-icons email">email</i>
+                <span>Kontakt</span>
+            </div>
+            <div class="products section">
+                <i class="material-icons">cake</i>
+               <a href="../pages/produkty.html"> <span>Produkty</span></a>
+            </div>
+            <div class="order section">
+                <i class="material-icons">star</i>
+                <span>Zamówienia</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-order">
+            <h1>Złóż zamówienie</h1>
+            <form class="form-order">
+                <label for="order-number">Wpisz nr Świeczki</label>
+                <input name="order-number" type="number" placeholder="1,3,7,4...">
+                <label for="user-name">Imię</label>
+                <input name="user-name" type="text" placeholder="Jan...">
+                <label for="user-surname">Nazwisko</label>
+                <input name="user-surname" type="text" placeholder="Kowalski...">
+                <label for="user-city">Miasto </label>
+                <input name="user-city" type="text" placeholder="Tychy...">
+                <label for="user-zip-code">Kod pocztowy</label>
+                <input name="user-zip-code" type="number" placeholder="00-000 ...">
+                <label for="user-addres">Adres</label>
+                <input name="user-addres" type="text" placeholder="Ulica,nr bloku/nr mieszkania">
+                <label for="user-e-mail">E-mail</label>
+                <input name="user-e-mail" type="email" placeholder="Jankowalski@gmail.com...">
+                <input type="submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <span>Świeczka.pl</span>
+        <div class="social">
+            <i class="icon-twitter"></i>
+            <i class="icon-facebook"></i>
+            <i class="icon-youtube"></i>
+            <i class="icon-gmail"></i>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+</html>

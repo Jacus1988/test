@@ -6,8 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 body{
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Courgette', cursive;
     background-color: black;
+    user-select: none;
 }
 nav{
     display:flex;
@@ -20,6 +21,7 @@ nav{
 }
 .logo-mobile{
     display:none;
+    margin:10px 0;
 }
 .logo-mobile a{
     text-decoration: none;
@@ -29,9 +31,10 @@ nav{
     font-weight: bold;
     color:red;
     text-shadow: 1px 1px 2px gold;
+    align-self: center;
 }
 .logo-mobile img{
-    margin:0 -5px;
+    margin:0px -5px;
 }
 .logo a{
     text-decoration: none;
@@ -44,6 +47,9 @@ nav{
 }
 .logo img{
     margin:0 -5px;
+}
+.mobile-layout  a{
+    text-decoration: none;
 }
 .material-icons.home{
     cursor:pointer;
@@ -72,7 +78,7 @@ nav{
 .mobile-layout{
     width:100%;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding:5px 10px;
     align-items: center;
     display:none;
@@ -132,6 +138,9 @@ nav{
 }
 .section-menu.active{
     transform:translateY(0)
+}
+.section a{
+    text-decoration: none;
 }
 .material-icons{
     color:red;
@@ -217,6 +226,109 @@ footer span{
 .icon-gmail:hover{
     color:white;
 }
+/* --------PRODUCTS PAGE--------------- */
+.main-products{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    padding:50px 60px;
+    gap:50px;
+}
+.item-product{
+    width:300px;
+    height:450px;
+    border:1px solid red;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow:0 0 15px 7px red;
+}
+.item-tittle{
+    padding:5px;
+    color:red;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px gold;
+}
+.item-img{
+    width:95%;
+    height:180px;
+    padding:5px 0;
+    border:1px solid red;
+    border-radius: 30px;
+    background-image: url(./images/images.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.item-description{
+    color:red;
+    padding:10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.item-value{
+    font-size: 2rem;
+    color:red;
+    text-shadow: 1px 1px 3px gold;
+}
+/* -----------ORDER PAGE------------- */
+.main-order{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100%;
+    padding:50px 70px;
+    background-color: black;
+    background-image: url(./images/big_candle.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.main-order h1{
+    font-size: 3rem;
+    color:red;
+    text-shadow: 2px 2px 4px gold;
+    text-align: center;
+    padding-bottom:30px;
+}
+.form-order{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-order label{
+    padding:7px 0;
+    color:red;
+    text-shadow: 2px 2px 2px gold;
+    font-size: 2rem;
+}
+.form-order input{
+    width:300px;
+    height:50px;
+    border-radius:15px;
+    box-shadow: 0 0 15px 3px red;
+    background-color: gold;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:black;
+    padding-left:5px;
+    outline:none;
+    cursor:pointer;
+}
+.form-order input[type=submit]{
+    margin-top:30px ;
+    width:200px;
+    border:none;
+    background-color: gold;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border:1px solid black;
+    cursor:pointer;
+}
+/* ----------MEDIA QUERIES -------------- */
 @media (max-width:1100px) {
     .section-menu .contact{
         border:none;
@@ -257,6 +369,8 @@ footer span{
     }
     .logo-mobile{
         display:flex;
+        align-items: center;
+        justify-content: center;
     }
     .logo{
         display:none;

@@ -1,0 +1,212 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --blue:#00ABFF;
+}
+    
+body{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    user-select: none;
+    cursor:default;
+}
+
+header{
+    display:flex;
+    align-items: center;
+    background-color: var(--blue) ;
+    box-shadow: 0px 10px 25px 0px black;
+    padding:0 40px ;
+    z-index: 2;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+    
+.logo{
+    align-items: center;
+    display:flex;
+    flex-grow: 1;
+}
+
+.logo span{
+    font-size: 2.5rem;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.logo span:nth-child(2){
+    color:black;
+    margin-left:10px;
+    text-shadow: 1px 1px 2px white;
+}
+
+.logo span:last-child{
+    color:black;
+    text-shadow: 1px 1px 2px white;
+}
+    
+
+.logo img{
+    margin:0 -8px;
+}
+
+.search-bar{
+    display:flex;
+    align-items: center;
+    padding-right:30px;
+}
+
+.search-bar input{
+    height:1.8rem;
+    width:300px;
+    border-radius: 5px;
+    padding:5px;
+    font-size:1.2rem;
+    font-weight: bold;
+    border:1px solid black;
+    outline:none;
+    cursor:pointer;
+}
+
+.search-bar input::placeholder{
+    font-size: 1rem;
+    color:var(--blue)
+}
+.search-bar i{
+    color:white;
+    text-shadow: 1px 1px 2px black;
+    font-size:1.5rem;
+}
+
+.hamburger{
+    width:50px;
+    height:35px;
+    border:none;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor:pointer;
+    transition:0.5s ease-in-out;
+}
+
+.hamburger:hover .bar{
+    background-color: black;
+}
+
+.hamburger .bar{
+    width:90%;
+    height:5px;
+    background-color: white;
+    border-radius:5px;
+    transition:0.5s ease-in-out;
+}
+
+.hamburger.active .bar:first-child{
+    transform:translateY(15px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2){
+    display:none;
+}
+
+.hamburger.active .bar:last-child{
+    transform:translateY(-15px) rotate(-45deg)
+}
+
+/* =========PRODUCTS================== */
+
+.main-products{
+    margin-top:100px;
+    padding:0 50px;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+.empty-state{
+    margin-top: 100px;
+    color:var(--blue);
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+    font-size: 3rem;
+    display:none;
+}
+
+.product-item{
+    width:300px;
+    height:480px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding:15px 10px;
+    border-radius:20px;
+    background: linear-gradient(to right top,var(--blue), white, var(--blue));
+    box-shadow: 0px 0px 40px 10px black;
+    transition:all 0.3s ease-in-out;
+    z-index:1;
+}
+
+.product-item:hover{
+    transform: scale(1.1);
+}
+
+.product-name{
+    font-size: 2.4rem;
+    color:var(--blue);
+    text-shadow: 2px 2px 3px black;
+}
+
+.product-photo{
+    width:300px;
+    height:180px;
+    padding:5px;
+    object-fit: contain;
+}
+
+.product-description{
+    font-size: 1.3rem;
+    text-align: center;
+}
+ 
+.product-price{
+    font-size: 2.4rem;
+    font-weight: bold;
+    color:black;
+    text-shadow: 1px 1px 3px var(--blue);
+}
+
+.product-item button{
+    width:70%;
+    height:45px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: black;
+    color:#00ABFF;
+    cursor:pointer;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
+    transition:0.5s linear;
+}
+
+.product-item button:hover{
+    color:black;
+    background-color: #00ABFF;
+}
+
+/* =========MEDIA=========== */
+
+@media (max-width:500px),(max-width:750px){
+    header{
+        padding:0 15px;
+    }
+    .search-bar{
+        display:none;
+    }
+}

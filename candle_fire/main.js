@@ -36,6 +36,7 @@ const renderProducts = (items) => {
 document.onload = renderProducts(currentProducts)
 
 const searchInput = document.querySelector('.search-input')
+const searchMobileInput = document.querySelector('.search-bar-mobile-input')
 
 searchInput.addEventListener('input', (e) => {
     const search = e.target.value
@@ -53,5 +54,22 @@ searchInput.addEventListener('input', (e) => {
     : ''
 
     renderProducts(foundProduct);
-    console.log(foundProduct);
+})
+
+searchMobileInput.addEventListener('input', (e) => {
+    const search = e.target.value
+
+    const foundProduct = currentProducts.filter((product) => {
+        if(product.name.toLowerCase().includes(search.toLowerCase())){
+            return product;
+        }
+        
+    });
+    const emptyState = document.querySelector('.empty-state')
+    
+    foundProduct.length === 0 
+    ? emptyState.style.display = 'block'
+    : ''
+
+    renderProducts(foundProduct);
 })

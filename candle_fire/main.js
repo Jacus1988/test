@@ -1,9 +1,15 @@
 const hamburger = document.querySelector('.hamburger')
+const menuMobile = document.querySelector('.menu-mobile')
+const normalMenu = document.querySelector('.normal-menu')
 
+normalMenu.classList.remove('active')
 hamburger.classList.remove('active')
+menuMobile.classList.remove('active')
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active')
+    menuMobile.classList.toggle('active')
+    normalMenu.classList.toggle('active')
 })
 
 let currentProducts = products;

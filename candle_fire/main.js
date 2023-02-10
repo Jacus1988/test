@@ -90,7 +90,7 @@ const addToBasket = (e) =>{
    
     
     const name = item.querySelector('.product-name').textContent;
-    const price = item.querySelector('.product-price').textContent;
+    const price = parseInt(item.querySelector('.product-price').textContent);
     const image = item.querySelector('.product-photo').getAttribute('src');
 
     const shopItem = document.createElement('div')
@@ -98,8 +98,12 @@ const addToBasket = (e) =>{
     shopItem.innerHTML = `
     <img src="${image}">
     <p class="purchase-name">${name}</p>
-    <p class="purchase-price">${price}</p>
+    <p class="purchase-price">${price} zł</p>
 `
+    const suma = document.querySelector('.suma')
+    suma.innerHTML = parseInt(suma.innerHTML || 0) + price;
+    
+
     const purchase = document.querySelector('.purchase')
     purchase.appendChild(shopItem)
     console.log(basketArray);

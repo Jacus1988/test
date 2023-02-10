@@ -331,7 +331,7 @@ header{
 .product-item button{
     width:70%;
     height:45px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: bold;
     border-radius: 20px;
     background-color: black;
@@ -369,6 +369,8 @@ header{
     box-shadow:0 0 15px 5px black;
     border-radius:20px;
     background: linear-gradient(to right top, var(--blue),white , var(--blue));
+    overflow: auto;
+    
 }
 .exit-btn{
     position:absolute;
@@ -393,6 +395,7 @@ header{
     font-size: 3rem;
     color:var(--blue);
     text-shadow:2px 2px 3px black;
+    
 }
 .purchase{
     display:flex;
@@ -420,6 +423,25 @@ header{
     color:var(--blue);
     text-shadow:2px 2px 2px black;
 }
+.purchase-shop-value{
+    border-top:2px solid black;
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    justify-content: end;
+    padding:10px;
+}
+.purchase-shop-value span{
+    font-size: 2.4rem;
+    margin-right: 30px;
+    display:flex;
+    color:var(--blue);
+    text-shadow:2px 2px 2px black;
+}
+.purchase-shop-value p{
+    margin:0 5px;
+}
+
 
 /* ===========CONTACT PAGE============ */
 
@@ -609,11 +631,25 @@ footer .logo span:last-child{
         width:100%;
         margin-top:50px;
     }
+    .basket-card-purchase p{
+        font-size:1.7rem;
+    }
     .basket-card-purchase h1{
         font-size:2.6rem;
     }
     .exit-btn{
-        font-size: 2.2rem;
+        font-size: 2.6rem;
+    }
+    .purchase-shop-value span{
+        font-size: 1.7rem;
+        margin-right: 30px;
+        display:flex;
+        color:var(--blue);
+        text-shadow:2px 2px 2px black;
+    }
+    .purchase-shop-value p{
+        margin:0 5px;
+        font-size: 1.7rem;
     }
 }
 @media (max-width:500px){
@@ -628,14 +664,28 @@ footer .logo span:last-child{
     }
     .basket-card-purchase{
         width:80%;
-        height:80%;
         top:17%;
         left:10%;
+        
     }
     .basket-card-purchase h1{
         font-size:2rem;
     }
+    .basket-card-purchase p{
+        font-size:1.4rem;
+    }
     .exit-btn{
         font-size: 2.4rem;
+    }
+    .purchase-shop-value span{
+        font-size: 1.4rem;
+        margin-right: 30px;
+        display:flex;
+        color:var(--blue);
+        text-shadow:2px 2px 2px black;
+    }
+    .purchase-shop-value p{
+        margin:0 5px;
+        font-size: 1.4rem;
     }
 }

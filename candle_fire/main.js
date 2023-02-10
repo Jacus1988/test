@@ -6,6 +6,9 @@ normalMenu.classList.remove('active')
 hamburger.classList.remove('active')
 menuMobile.classList.remove('active')
 
+let basketArray = [];
+
+
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active')
     menuMobile.classList.toggle('active')
@@ -26,7 +29,7 @@ const renderProducts = (items) => {
         <img src="${items[i].img}" alt="" class="product-photo">
         <p class="product-description">${items[i].description}</p>
         <p class="product-price">${items[i].price}</p>
-        <button>Dodaj do koszyka</button>`;
+        <button class="btn-basket">Dodaj do koszyka</button>`;
         
         newProduct.setAttribute("data",items[i].id)
         mainProducts.appendChild(newProduct)
@@ -72,4 +75,53 @@ searchMobileInput.addEventListener('input', (e) => {
     : ''
 
     renderProducts(foundProduct);
+})
+
+const btnBasket = document.querySelectorAll('.btn-basket')
+
+const addToBasket = (e) =>{
+    const basketNumber = document.querySelector('.basket-adds-number')
+
+   const item = e.target.parentElement
+   basketArray.push(item)
+   basketNumber.innerHTML = basketArray.length
+   basketNumber.style.display = 'flex'
+
+   
+    
+    const name = item.querySelector('.product-name').textContent;
+    const price = item.querySelector('.product-price').textContent;
+    const image = item.querySelector('.product-photo').getAttribute('src');
+
+    const shopItem = document.createElement('div')
+    shopItem.classList.add('purchase-item')
+    shopItem.innerHTML = `
+    <img src="${image}">
+    <p class="purchase-name">${name}</p>
+    <p class="purchase-price">${price}</p>
+`
+    const purchase = document.querySelector('.purchase')
+    purchase.appendChild(shopItem)
+    console.log(basketArray);
+}
+
+
+
+
+btnBasket.forEach((btn) => { btn.addEventListener
+    ('click', addToBasket)
+});
+    
+const basketIconShop = document.querySelector('.basket-adds')
+
+basketIconShop.addEventListener('click', () => {
+    const basketCard = document.querySelector('.basket-card')
+    basketCard.style.display = 'block';
+
+    
+
+    const exitBtn = document.querySelector('.exit-btn')
+    exitBtn.addEventListener('click', () => {
+        basketCard.style.display ='none'
+    })
 })

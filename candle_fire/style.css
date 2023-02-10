@@ -119,6 +119,7 @@ header{
     margin-right:10px;
     padding:0 10px;
     position:relative;
+    cursor:pointer;
 }
 
 .basket-adds i{
@@ -128,6 +129,7 @@ header{
 }
 
 .basket-adds-number{
+    display:none;
     position: absolute;
     top:0;
     right:0;
@@ -136,7 +138,6 @@ header{
     border-radius:50%;
     background-color: black;
     color:var(--blue);
-    display:flex;
     justify-content: center;
     align-items: center;
     font-size: 1.6rem;
@@ -345,6 +346,80 @@ header{
     color:black;
     background-color: #00ABFF;
 }
+/* ==========BASKET CARD================= */
+
+.basket-card{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    backdrop-filter: blur(4px);
+    z-index: 3;
+    display:none;
+}
+.basket-card-purchase{
+    width:60%;
+    height:80%;
+    top:15%;
+    left:20%;
+    position:absolute;
+    background-color: red;
+    background-color: white;
+    box-shadow:0 0 15px 5px black;
+    border-radius:20px;
+    background: linear-gradient(to right top, var(--blue),white , var(--blue));
+}
+.exit-btn{
+    position:absolute;
+    top:2%;
+    right:3%;
+    font-size: 3.5rem;
+    font-family: 'Lobster', cursive;
+    color:white;
+    text-shadow:2px 2px 3px black;
+    background: none;
+    border:none;
+    cursor:pointer;
+    transition:0.4s ease-in-out;
+}
+.exit-btn:hover{
+    color:black;
+    text-shadow: 2px 2px 3px white;
+}
+.basket-card-purchase h1{
+    padding:10px 0;
+    text-align: center;
+    font-size: 3rem;
+    color:var(--blue);
+    text-shadow:2px 2px 3px black;
+}
+.purchase{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    margin-top: 15px;
+}
+.purchase-item{
+    display:flex;
+    padding:10px;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid var(--blue);
+    width:90%;
+    margin:0 auto;
+}
+.purchase-item img{
+    width:60px;
+    height:60px;
+    object-fit: cover;
+    border-radius: 10px;;
+}
+.purchase-item p{
+    font-size: 2rem;
+    color:var(--blue);
+    text-shadow:2px 2px 2px black;
+}
 
 /* ===========CONTACT PAGE============ */
 
@@ -534,6 +609,12 @@ footer .logo span:last-child{
         width:100%;
         margin-top:50px;
     }
+    .basket-card-purchase h1{
+        font-size:2.6rem;
+    }
+    .exit-btn{
+        font-size: 2.2rem;
+    }
 }
 @media (max-width:500px){
     header{
@@ -544,5 +625,17 @@ footer .logo span:last-child{
     }
     footer{
         flex-direction: column;
+    }
+    .basket-card-purchase{
+        width:80%;
+        height:80%;
+        top:17%;
+        left:10%;
+    }
+    .basket-card-purchase h1{
+        font-size:2rem;
+    }
+    .exit-btn{
+        font-size: 2.4rem;
     }
 }

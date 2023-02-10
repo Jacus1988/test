@@ -18,65 +18,6 @@ hamburger.addEventListener('click', () => {
 let currentProducts = products;
 const mainProducts = document.querySelector('.main-products')
 
-const renderProducts = (items) => {
-    mainProducts.innerHTML ="";
-    
-    for(let i = 0; i < items.length; i++){
-        
-        const newProduct = document.createElement("div");
-        newProduct.classList.add('product-item')
-        newProduct.innerHTML = ` <p class="product-name">${items[i].name}</p>
-        <img src="${items[i].img}" alt="" class="product-photo">
-        <p class="product-description">${items[i].description}</p>
-        <p class="product-price">${items[i].price}</p>
-        <button class="btn-basket">Dodaj do koszyka</button>`;
-        
-        newProduct.setAttribute("data",items[i].id)
-        mainProducts.appendChild(newProduct)
-        
-    }
-}
-document.onload = renderProducts(currentProducts)
-
-const searchInput = document.querySelector('.search-input')
-const searchMobileInput = document.querySelector('.search-bar-mobile-input')
-
-searchInput.addEventListener('input', (e) => {
-    const search = e.target.value
-
-    const foundProduct = currentProducts.filter((product) => {
-        if(product.name.toLowerCase().includes(search.toLowerCase())){
-            return product;
-        }
-        
-    });
-    const emptyState = document.querySelector('.empty-state')
-    
-    foundProduct.length === 0 
-    ? emptyState.style.display = 'block'
-    : ''
-
-    renderProducts(foundProduct);
-})
-
-searchMobileInput.addEventListener('input', (e) => {
-    const search = e.target.value
-
-    const foundProduct = currentProducts.filter((product) => {
-        if(product.name.toLowerCase().includes(search.toLowerCase())){
-            return product;
-        }
-        
-    });
-    const emptyState = document.querySelector('.empty-state')
-    
-    foundProduct.length === 0 
-    ? emptyState.style.display = 'block'
-    : ''
-
-    renderProducts(foundProduct);
-})
-
 const btnBasket = document.querySelectorAll('.btn-basket')
 
 const addToBasket = (e) =>{
@@ -107,20 +48,99 @@ const addToBasket = (e) =>{
     const purchase = document.querySelector('.purchase')
     purchase.appendChild(shopItem)
     console.log(basketArray);
+
+    const clearBtn = document.querySelector('.clear-basket')
+
+    clearBtn.addEventListener('click', () => {
+        suma.innerHTML = "";
+        purchase.removeChild(shopItem);
+        basketNumber.innerHTML = '';
+        basketNumber.style.display = 'none';
+        basketArray = [];
+    })
 }
-
-
 
 
 btnBasket.forEach((btn) => { btn.addEventListener
     ('click', addToBasket)
 });
+
+const renderProducts = (items) => {
+    mainProducts.innerHTML ="";
+    
+    for(let i = 0; i < items.length; i++){
+        
+        const newProduct = document.createElement("div");
+        newProduct.classList.add('product-item')
+        newProduct.innerHTML = ` <p class="product-name">${items[i].name}</p>
+        <img src="${items[i].img}" alt="" class="product-photo">
+        <p class="product-description">${items[i].description}</p>
+        <p class="product-price">${items[i].price}</p>
+        <button class="btn-basket">Dodaj do koszyka</button>`;
+        
+        newProduct.setAttribute("data",items[i].id)
+        mainProducts.appendChild(newProduct)
+
+        const basketButton = newProduct.querySelector('.btn-basket');
+        basketButton.addEventListener('click', addToBasket);
+    }
+    
+        
+}
+document.onload = renderProducts(currentProducts)
+
+const searchInput = document.querySelector('.search-input')
+const searchMobileInput = document.querySelector('.search-bar-mobile-input')
+
+searchInput.addEventListener('input', (e) => {
+    const search = e.target.value
+
+    const foundProduct = currentProducts.filter((product) => {
+        if(product.name.toLowerCase().includes(search.toLowerCase())){
+            return product;
+        }
+        
+    });
+    const emptyState = document.querySelector('.empty-state')
+    
+    foundProduct.length === 0 
+    ? emptyState.style.display = 'block'
+    : ''
+    
+    
+    renderProducts(foundProduct);
+})
+
+searchMobileInput.addEventListener('input', (e) => {
+    const search = e.target.value
+
+    const foundProduct = currentProducts.filter((product) => {
+        if(product.name.toLowerCase().includes(search.toLowerCase())){
+            return product;
+        }
+        
+    });
+    const emptyState = document.querySelector('.empty-state')
+    
+    foundProduct.length === 0 
+    ? emptyState.style.display = 'block'
+    : ''
+    
+
+    renderProducts(foundProduct);
+})
+
+
+
+
+
+
     
 const basketIconShop = document.querySelector('.basket-adds')
 
 basketIconShop.addEventListener('click', () => {
     const basketCard = document.querySelector('.basket-card')
-    basketCard.style.display = 'block';
+    basketCard.style.display = 'flex';
 
     
 

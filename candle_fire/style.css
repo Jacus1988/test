@@ -357,25 +357,25 @@ header{
     backdrop-filter: blur(4px);
     z-index: 3;
     display:none;
+    justify-content: center;
+    align-items: center;
 }
 .basket-card-purchase{
-    width:60%;
+    margin-top: 50px;
+    width:80%;
     height:80%;
-    top:15%;
-    left:20%;
-    position:absolute;
     background-color: red;
     background-color: white;
     box-shadow:0 0 15px 5px black;
     border-radius:20px;
     background: linear-gradient(to right top, var(--blue),white , var(--blue));
-    overflow: auto;
-    
+    overflow: auto;   
+}
+.basket-exit{
+    display:flex;
+    justify-content: space-around;
 }
 .exit-btn{
-    position:absolute;
-    top:2%;
-    right:3%;
     font-size: 3.5rem;
     font-family: 'Lobster', cursive;
     color:white;
@@ -395,7 +395,7 @@ header{
     font-size: 3rem;
     color:var(--blue);
     text-shadow:2px 2px 3px black;
-    
+    justify-self: center;
 }
 .purchase{
     display:flex;
@@ -425,23 +425,33 @@ header{
 }
 .purchase-shop-value{
     border-top:2px solid black;
-    width:90%;
+    width:95%;
     margin:0 auto;
     display:flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items:center;
     padding:10px;
 }
 .purchase-shop-value span{
     font-size: 2.4rem;
-    margin-right: 30px;
     display:flex;
-    color:var(--blue);
-    text-shadow:2px 2px 2px black;
+    color:black;
+    text-shadow:2px 2px 2px var(--blue);
 }
 .purchase-shop-value p{
     margin:0 5px;
 }
-
+.clear-basket{
+    width:150px;
+    height:50px;
+    border-radius: 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 1.6rem;
+    box-shadow:0 0 10px 3px black;
+    background-color: var(--blue);
+    text-shadow: 1px 1px 2px white;
+    cursor:pointer;
+}
 
 /* ===========CONTACT PAGE============ */
 
@@ -631,6 +641,9 @@ footer .logo span:last-child{
         width:100%;
         margin-top:50px;
     }
+    .basket-card-purchase{
+        width:80%;
+    }
     .basket-card-purchase p{
         font-size:1.7rem;
     }
@@ -641,15 +654,15 @@ footer .logo span:last-child{
         font-size: 2.6rem;
     }
     .purchase-shop-value span{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         margin-right: 30px;
         display:flex;
-        color:var(--blue);
-        text-shadow:2px 2px 2px black;
+        color:black;
+        text-shadow:1px 1px 2px var(--blue);
     }
     .purchase-shop-value p{
         margin:0 5px;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 }
 @media (max-width:500px){
@@ -681,11 +694,11 @@ footer .logo span:last-child{
         font-size: 1.4rem;
         margin-right: 30px;
         display:flex;
-        color:var(--blue);
-        text-shadow:2px 2px 2px black;
+        color:black;
+        text-shadow:1px 1px 2px var(--blue);
     }
     .purchase-shop-value p{
         margin:0 5px;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }

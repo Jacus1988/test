@@ -369,7 +369,10 @@ header{
     box-shadow:0 0 15px 5px black;
     border-radius:20px;
     background: linear-gradient(to right top, var(--blue),white , var(--blue));
-    overflow: auto;   
+    overflow: auto; 
+    display:flex  ;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .basket-exit{
     display:flex;

@@ -8,11 +8,13 @@
     --font-color :rgb(9, 255, 0);
     --main-font:font-family: 'Space Grotesk', sans-serif;
     --second-font:font-family: 'Gentium Book Plus', serif;
+    --second-color:rgba(0, 40, 163, 1);
 }
 
 body{
-    background:linear-gradient(to right top, #22052b 40%,rgb(6, 0, 22));
-    width:100vw;
+    background-color: rgba(252, 89, 229, 1);
+    background-image: linear-gradient(78deg, rgb(153, 10, 134) 0%, rgba(0, 40, 163, 1) 100%);
+    width:100%;
     height:100vh;
     font-family: var(--main-font);
     cursor:default;
@@ -39,22 +41,31 @@ body{
     font-size: 3rem;
 }
 
-.end-logo{
-    cursor:pointer;
+.logo .basket-shoping{
+    font-size:3rem;
+    display:none;
+    position:relative;
 }
 
-.end-logo :first-child{
-    transition:.5s ease-in-out;
+.basket-number{
+    position:absolute;
+    font-size: 1.4rem;
+    font-style:normal;
+    top:-10%;
+    right:-10%;
+    background-color: var(--second-color);
+    color:var(--font-color);
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    border:1px solid var(--font-color);
 }
 
-.end-logo :first-child:hover{
-    color:blue;
-}
-
-
-
-.end-logo{
-    font-size:2rem;
+.basket-shoping.active{
+    display:block;
 }
 /* ===== Navigation ===== */
 
@@ -81,38 +92,36 @@ body{
 
 .navigation i:hover{
     cursor:pointer;
-    color:#22052b;
+    color:var(--second-color);
     background-color: var(--font-color);
     text-shadow: none;
 }
 
 .navigation i.active{
-    color:#22052b;
+    color:var(--second-color);
     background-color: var(--font-color);
     text-shadow: none;
 }
 
 /* ===== Main ===== */
 
-.main-container{
-}
-
 .section{
     padding:10px 100px 0px 50px; 
 }
+
 /* =====SECTION 1  Home===== */
+
 .sec1{
     transform: translateY(0) scale(1);
     display:none;
 }
 
-.home {
+.sec1.active{
     gap:10px;
 }
 
 .home span{
-    float:left;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color:var(--font-color);
     text-shadow: 1px 1px 3px black;
 }
@@ -121,25 +130,110 @@ body{
 }
 
 .img-box{
+    float:left;
     width:350px;
     height:350px;
     object-fit: cover;
     border-radius: 50%;
     object-position: center top;
     border:3px solid var(--font-color);
+    margin:5px;
 }
 
 
-/* =====Section 5 About ===== */
+/* =====Section 2 About ===== */
 .sec2{
     transform: translateY(0) scale(1);
     display:none;
 }
 
+.sec2 span{
+    font-size: 1.7rem;
+    color:var(--font-color);
+    text-shadow: 1px 1px 3px black;
+}
+/* ===== Section 3 Shop ===== */
+
 .sec3{
     transform: translateY(0) scale(1);
     display:none;
 }
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:20px;
+    gap:30px;
+}
+
+.item{
+    width:300px;
+    height:400px;
+    border:2px solid var(--font-color);
+    border-radius:20px;
+    position:relative;
+    background:linear-gradient(78deg, rgb(153, 10, 134) 0%, rgba(0, 40, 163, 1) 100%);
+}
+
+.item-tittle{
+    font-family:'Space Grotesk', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color:var(--font-color);
+    text-shadow: 2px 2px 2px black;
+    padding:5px;
+    font-size: 2rem;
+    text-align:center;
+}
+
+.item-img{
+    width:100%;
+    height:150px;
+    object-fit: contain;
+}
+
+.item-description{
+    padding:10px;
+    text-align: center;
+    font-size: 1.4rem;
+    color:var(--font-color);
+    text-shadow: 1px 1px black;
+}
+
+.item-down{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+.item-price{
+    font-size: 3rem;
+    color:var(--font-color);
+    font-weight:bold;
+    font-style: italic;
+    text-shadow: 2px 2px 2px black;
+}
+
+.item-btn{
+    width:200px;
+    height:30px;
+    margin:5px;
+    border-radius: 15px;
+    cursor:pointer;
+    background-color: var(--font-color);
+    border:none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+   font-family:'Space Grotesk', sans-serif ;
+}
+/* ===== Sectio 4 Contact ===== */
 
 .sec4{
     transform: translateY(0) scale(1);
@@ -147,7 +241,7 @@ body{
 }
 
 .section.active{
-    display:flex;
+    display:block;
     animation: animScale 1s linear;
 }
 
@@ -183,25 +277,34 @@ footer span{
     font-size:1.8rem;
     color:var(--font-color);
 }
-
-@media(max-width:500px) {
+@media(max-width:1024px){
     body{
         height:100%;
     }
+}
+@media(max-width:500px) {
     .logo{
         margin-bottom:20px;
-        justify-content: center;
     }
-    .home{
+    .home span, .about span{
         flex-direction: column ;
+        font-size: 1.3rem;
     }
     .img-box{
         width:300px;
         height:300px;
     }
+    .item-description{
+        font-size:1.1rem;
+    }
     footer{
         flex-direction: column;
         justify-content: center;
         gap:5px;
+    }
+    @media(max-width:400px){
+        .img-box{
+            margin-left:-20px;
+        }
     }
 }

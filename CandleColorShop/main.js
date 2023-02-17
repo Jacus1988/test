@@ -60,15 +60,41 @@ function renderProducts(){
       const productsSection = document.querySelector('.products')
       productsSection.appendChild(product)
     })
-    const btn = document.querySelectorAll('.item-btn')
-    btn.forEach((btn) => {
-      btn.addEventListener('click',(e) => {
-        const target = e.target
-        shopProductsArray.push(target)
-        console.log(shopProductsArray);
+  }
+  renderProducts()
+  
+  const btn = document.querySelectorAll('.item-btn')
+  btn.forEach((btn) => {
+    btn.addEventListener('click',(e) => {
+      const target = e.target.parentElement
+      shopProductsArray.push(target)
+      let basketNumber = document.querySelector('.basket-number')
+      basketNumber.innerHTML = shopProductsArray.length
+      basketNumber.style.display = 'flex'
+
+      const name = target.querySelector('.item-tittle').textContent
+      const price = parseInt(target.querySelector('.item-price').textContent);
+      const image = target.querySelector('.item-img').getAttribute('src');
+      const shopItem = createElement('div')
+      shopItem.classList.add('shop-item')
+      shopItem.innerHTML = `<img src="${image}" alt="" class="shop-item-img">
+      <div class="shop-item-name">${name}</div>
+      <div class="shop-item-price">${price}</div>`
+
+      const shopCartItem = document.querySelector('.shop-cart-items')
+      shopCartItem.appendChild(shopItem)
+
+      console.log(name);
+      const basketShopIcon = document.querySelector('.basket-shop')
+      basketShopIcon.addEventListener('click', () => {
+        const shopCart = document.querySelector('.shop-cart')
+        shopCart.style.display = 'flex'
+        const exitBtn = document.querySelector('.exit-btn')
+        exitBtn.addEventListener('click',()=>{
+          shopCart.style.display = 'none'
+        })
       })
-    })
-}
-
-
-renderProducts()
+})
+})
+  
+  

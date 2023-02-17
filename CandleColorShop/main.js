@@ -20,14 +20,27 @@ window.addEventListener('scroll', () => {
 const menu = document.querySelectorAll('ul li a')
 
 menu.forEach((item) => {
-
     item.addEventListener('click', (e) => {
-        e.preventDefault()
-        let targetItem = e.target
-        menu.forEach(item => {
-            item.classList.remove('active')
-        })
 
-        targetItem = item.classList.add('active')
+      let targetItem = e.target;
+      menu.forEach(item => {
+        item.classList.remove('active');
+      });
+      targetItem.classList.add('active'); 
+    });   
+  });
+
+ const stars = document.querySelectorAll('.stars i')
+
+const colorArray = ["red", "blue","green","yellow","gold","gray","pink","lightblue","lightgreen","crimson","orange","violet","aqua","aquamarine","brown","coral"];
+
+function changeColors(){
+  stars.forEach((star) => {
+      const randomIndex = Math.floor(Math.random() * colorArray.length);
+      const randomColor = colorArray[randomIndex];
+      star.style.color = randomColor
     })
-})
+}
+
+setInterval(changeColors,1000)
+    

@@ -40,7 +40,35 @@ function changeColors(){
       const randomColor = colorArray[randomIndex];
       star.style.color = randomColor
     })
+  }
+  
+  setInterval(changeColors,1000)
+  
+  const productsArray = products
+  let shopProductsArray = [];
+
+function renderProducts(){
+    productsArray.forEach((item) => {
+      const product = document.createElement('div')
+      product.classList.add('item')
+      product.innerHTML = `<p class="item-tittle">${item.name}</p>
+      <img src="${item.img}" alt="" class="item-img">
+      <p class="item-description">${item.description}</p>
+      <p class="item-price">${item.price}</p>
+      <button class="item-btn">Dodaj do koszyka</button>`
+      
+      const productsSection = document.querySelector('.products')
+      productsSection.appendChild(product)
+    })
+    const btn = document.querySelectorAll('.item-btn')
+    btn.forEach((btn) => {
+      btn.addEventListener('click',(e) => {
+        const target = e.target
+        shopProductsArray.push(target)
+        console.log(shopProductsArray);
+      })
+    })
 }
 
-setInterval(changeColors,1000)
-    
+
+renderProducts()

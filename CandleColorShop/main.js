@@ -55,7 +55,7 @@ function renderProducts(){
       <img src="${item.img}" alt="" class="item-img">
       <p class="item-description">${item.description}</p>
       <p class="item-price">${item.price}</p>
-      <button class="item-btn">Dodaj do koszyka</button>`
+      <button class="item-btn">Dodaj do Koszyka</button>`
       
       const productsSection = document.querySelector('.products')
       productsSection.appendChild(product)
@@ -75,26 +75,40 @@ function renderProducts(){
       const name = target.querySelector('.item-tittle').textContent
       const price = parseInt(target.querySelector('.item-price').textContent);
       const image = target.querySelector('.item-img').getAttribute('src');
-      const shopItem = createElement('div')
+
+      const shopItem = document.createElement('div')
       shopItem.classList.add('shop-item')
       shopItem.innerHTML = `<img src="${image}" alt="" class="shop-item-img">
       <div class="shop-item-name">${name}</div>
-      <div class="shop-item-price">${price}</div>`
+      <div class="shop-item-price">${price}zł</div>`
+
+      const tottalInner = document.querySelector('.tottal')
+      tottalInner.innerHTML = parseInt(tottalInner.innerHTML || 0 ) + price + "zł"
 
       const shopCartItem = document.querySelector('.shop-cart-items')
       shopCartItem.appendChild(shopItem)
 
-      console.log(name);
+      
+     
       const basketShopIcon = document.querySelector('.basket-shop')
       basketShopIcon.addEventListener('click', () => {
         const shopCart = document.querySelector('.shop-cart')
         shopCart.style.display = 'flex'
+        window.scrollTo(0, 0)
         const exitBtn = document.querySelector('.exit-btn')
+        setInterval(changeExitBtnColor,1000)
         exitBtn.addEventListener('click',()=>{
           shopCart.style.display = 'none'
         })
       })
 })
 })
+
+function changeExitBtnColor(){
+  const exitBtn = document.querySelector('.exit-btn')
+  const randomIndex = Math.floor(Math.random() * colorArray.length);
+        const randomColor = colorArray[randomIndex];
+        exitBtn.style.color = randomColor
+}
   
   

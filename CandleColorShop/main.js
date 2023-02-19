@@ -41,8 +41,14 @@ function changeColors(){
       star.style.color = randomColor
     })
   }
-  
   setInterval(changeColors,1000)
+  
+  function changePhotoColor(){
+    const userPhoto = document.querySelector('.user-photo')
+    const random = Math.floor(Math.random() * colorArray.length)
+    userPhoto.style.border = '3px solid ' + colorArray[random]
+}
+  setInterval(changePhotoColor,1000)
   
   const productsArray = products
   let shopProductsArray = [];
@@ -114,4 +120,6 @@ function renderProducts(){
 })
 
 
-  
+ 
+
+    

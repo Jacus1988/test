@@ -445,16 +445,15 @@ header{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     display:grid;
-    max-height: 600px;
 }
 
 .grid img{
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position: center;
     border:solid 5px rgb(3, 253, 3);
     border-radius:5px;
+    margin-bottom:10px;
 }
 
 .grid img:nth-child(even){
@@ -463,7 +462,40 @@ header{
 
 /* ===== Section About ===== */
 
+#about{
+    margin:10px 0;
+}
 
+.user{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-photo{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border:3px solid green;
+    transition: 1s all ease-in-out;
+}
+
+.user h1{
+    font-size: 3rem;
+    background: linear-gradient(45deg, blue,rgb(255, 1, 200) ,red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.user p{
+    text-align: center;
+    padding:0 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 /* ===== Media Queries ===== */
 @media (max-width:1050px){
@@ -517,6 +549,12 @@ header{
     .grid{
         grid-template-columns:repeat(1, 1fr);
         grid-template-rows: repeat(4 , 1fr);
+    }
+    .user p{
+        text-align: center;
+        padding:0 30px;
+        font-size: 1.3rem;
+        font-weight: bold;
     }
 }
 

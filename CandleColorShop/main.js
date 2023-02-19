@@ -62,32 +62,41 @@ function renderProducts(){
     })
   }
   renderProducts()
+  let basketNumber = document.querySelector('.basket-number')
   
   const btn = document.querySelectorAll('.item-btn')
   btn.forEach((btn) => {
     btn.addEventListener('click',(e) => {
       const target = e.target.parentElement
       shopProductsArray.push(target)
-      let basketNumber = document.querySelector('.basket-number')
       basketNumber.innerHTML = shopProductsArray.length
       basketNumber.style.display = 'flex'
-
+      
       const name = target.querySelector('.item-tittle').textContent
       const price = parseInt(target.querySelector('.item-price').textContent);
       const image = target.querySelector('.item-img').getAttribute('src');
-
+      
       const shopItem = document.createElement('div')
       shopItem.classList.add('shop-item')
+      shopItem.setAttribute('data-price',price)
       shopItem.innerHTML = `<img src="${image}" alt="" class="shop-item-img">
       <div class="shop-item-name">${name}</div>
-      <div class="shop-item-price">${price}zł</div>`
+      <div class="shop-item-price" data-price="${price}">${price}zł</div>
+      <button class="del-btn"><img src="../svg/icons8-trash-64.png"></button>`
 
       const tottalInner = document.querySelector('.tottal')
       tottalInner.innerHTML = parseInt(tottalInner.innerHTML || 0 ) + price + "zł"
-
+      
       const shopCartItem = document.querySelector('.shop-cart-items')
       shopCartItem.appendChild(shopItem)
-
+      basketNumber.innerHTML = shopCartItem.children.length
+      
+      shopItem.addEventListener('click', (e) => {
+        const parent = e.target.parentElement.parentElement
+        tottalInner.innerHTML = parseInt(tottalInner.innerHTML) -  parent.getAttribute('data-price') + "zł"
+        parent.remove()
+        basketNumber.innerHTML = shopCartItem.children.length
+      }) 
       
      
       const basketShopIcon = document.querySelector('.basket-shop')
@@ -96,19 +105,13 @@ function renderProducts(){
         shopCart.style.display = 'flex'
         window.scrollTo(0, 0)
         const exitBtn = document.querySelector('.exit-btn')
-        setInterval(changeExitBtnColor,1000)
         exitBtn.addEventListener('click',()=>{
           shopCart.style.display = 'none'
+
         })
       })
 })
 })
 
-function changeExitBtnColor(){
-  const exitBtn = document.querySelector('.exit-btn')
-  const randomIndex = Math.floor(Math.random() * colorArray.length);
-        const randomColor = colorArray[randomIndex];
-        exitBtn.style.color = randomColor
-}
-  
+
   

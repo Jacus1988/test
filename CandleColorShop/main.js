@@ -69,6 +69,7 @@ function renderProducts(){
   }
   renderProducts()
   let basketNumber = document.querySelector('.basket-number')
+  let totalCartValue = 0;
   
   const btn = document.querySelectorAll('.item-btn')
   btn.forEach((btn) => {
@@ -88,21 +89,17 @@ function renderProducts(){
       shopItem.innerHTML = `<img src="${image}" alt="" class="shop-item-img">
       <div class="shop-item-name">${name}</div>
       <div class="shop-item-price" data-price="${price}">${price}zł</div>
-      <button class="del-btn"><img src="../svg/icons8-trash-64.png"></button>`
+      <button onclick="deleted(event)" class="del-btn"><img src="../svg/icons8-trash-64.png"></button>`
 
       const tottalInner = document.querySelector('.tottal')
       tottalInner.innerHTML = parseInt(tottalInner.innerHTML || 0 ) + price + "zł"
       
       const shopCartItem = document.querySelector('.shop-cart-items')
       shopCartItem.appendChild(shopItem)
-      basketNumber.innerHTML = shopCartItem.children.length
       
-      shopItem.addEventListener('click', (e) => {
-        const parent = e.target.parentElement.parentElement
-        tottalInner.innerHTML = parseInt(tottalInner.innerHTML) -  parent.getAttribute('data-price') + "zł"
-        parent.remove()
-        basketNumber.innerHTML = shopCartItem.children.length
-      }) 
+      basketNumber.innerHTML = shopCartItem.children.length
+      totalCartValue += price
+      
       
      
       const basketShopIcon = document.querySelector('.basket-shop')
@@ -119,7 +116,17 @@ function renderProducts(){
 })
 })
 
-
+function deleted(event){
+    
+    const item = event.target.parentElement.parentElement
+    const price = item.getAttribute('data-price')
+    totalCartValue -= price 
+    const tottalInner = document.querySelector('.tottal')
+    tottalInner.innerHTML = totalCartValue + "zł"
+    basketNumber.innerHTML--
+    item.remove()
+    
+}
  
 
     

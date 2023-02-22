@@ -96,7 +96,6 @@ function renderProducts(){
       
       const shopCartItem = document.querySelector('.shop-cart-items')
       shopCartItem.appendChild(shopItem)
-      
       basketNumber.innerHTML = shopCartItem.children.length
       totalCartValue += price
       
@@ -125,8 +124,8 @@ function deleted(event){
     tottalInner.innerHTML = totalCartValue + "zł"
     basketNumber.innerHTML--
     item.remove()
-    
-}
- 
+  }
+
+  
 
     

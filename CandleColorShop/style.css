@@ -403,7 +403,7 @@ header{
 }
 
 .shop-item:nth-child(even){
-    background-color:rgb(128,128,128,0.2)
+    background:linear-gradient(to right ,rgb(5, 5, 252,0.2) ,rgba(250, 3, 188, 0.2))
 }
 
 .shop-item-img{
@@ -411,15 +411,16 @@ header{
     height:60px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 20px 1px black;
 }
 
 .shop-item-name{
     font-size: 2rem;
+    text-align: center;
 }
 
 .shop-item-price{
     font-size: 2rem;
+    text-align: center;
 }
 
 .shop-cart-tottal{
@@ -496,11 +497,79 @@ header{
     font-size: 1.5rem;
     font-weight: bold;
 }
+/* ===== Section Contact ===== */
 
+.contact{
+    display:flex;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: var(--font-main);
+    background:linear-gradient(to right,yellow,rgb(0, 248, 0),yellow);
+}
+
+.contact-up form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:rgb(255, 22, 5);
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+}
+
+.contact-up form input{
+    height:30px;
+    font-size: 1.4rem;
+    padding:0 5px;
+    border:3px solid rgb(255, 22, 5);
+    border-radius:10px;
+    outline: none;
+    background-color: rgb(255, 22, 5,0.2);
+}
+
+.contact-up form textarea{
+    font-size: 1.4rem;
+    padding:0 5px;
+    border:3px solid rgb(255, 22, 5);
+    border-radius:10px;
+    outline: none;
+    background-color: rgb(255, 22, 5,0.2);
+    resize: none;
+    height:220px;
+}
+
+.contact-down ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.contact-down ul li{
+    color:rgb(255, 22, 5);
+    font-weight: bold;
+    padding:0 10px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.contact-map iframe{
+    border:3px solid rgb(255, 22, 5);
+}
 /* ===== Media Queries ===== */
 @media (max-width:1050px){
     .navigation ul li a{
         font-size: 1.5rem;
+    }
+    .contact{
+        font-size: 1.5rem;
+    }
+    .contact-up{
+        width:80%;
+    }
+    .contact-map iframe{
+        width:300px;
+        height:300px;
     }
 }
 @media (max-width:500px),(max-width:750px){
@@ -555,6 +624,24 @@ header{
         padding:0 30px;
         font-size: 1.3rem;
         font-weight: bold;
+    }
+    .contact{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:20px 5px;
+        gap:10px;
+    }
+    .contact-up{
+        width:80%;
+    }
+    .contact-down ul li{
+        text-align: center;
+    }
+    .contact-map iframe{
+        width:90%;
+        height:300px;
+        margin:10px auto;
     }
 }
 

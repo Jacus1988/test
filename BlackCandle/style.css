@@ -62,7 +62,7 @@ nav{
     flex-grow: 1;
     font-size:2rem;
     font-family: var(--logo-font);
-    animation:slideright .7s ease;
+    animation:slideright 1s ease;
 }
 
 .logo span{
@@ -88,6 +88,32 @@ nav{
 
 .menu li{
     padding:0 10px;
+    animation:slidetop 1s ease forwards;
+    opacity:0;
+    animation-delay: .5s;
+}
+
+.menu li:nth-child(1){
+    animation:slidetop 1s ease forwards;
+    opacity:0;
+    animation-delay: .7s;
+}
+
+.menu li:nth-child(2){
+    animation:slidetop 1s ease forwards;
+    opacity:0;
+    animation-delay: .9s;
+}
+
+.menu li:nth-child(3){
+    animation:slidetop 1s ease forwards;
+    opacity:0;
+    animation-delay: 1.1s;
+}
+.menu li:nth-child(4){
+    animation:slidetop 1s ease forwards;
+    opacity:0;
+    animation-delay: 1.3s;
 }
 
 .menu li a{
@@ -95,6 +121,7 @@ nav{
     text-decoration: none;
     font-size: 1.5rem;
     transition:.5s ease-in-out;
+    
 }
 
 .menu li a.active , .menu li a:hover{
@@ -105,6 +132,9 @@ nav{
  nav .bx{
     font-size:2rem;
     cursor:pointer;
+    animation:slidetop 1s ease forwards;
+    opacity:0;
+    animation-delay: .5s;
  }
 
  nav .bxs-sun{
@@ -124,6 +154,9 @@ nav{
     transition:0.5s ease-in-out;
     display:none;
     margin-left:20px;
+    animation:slideleft 1s ease forwards;
+    animation-delay: .5s;
+    opacity:0;
 }
 
 .hamburger .bar{
@@ -168,13 +201,17 @@ nav{
     display:flex;
     font-size: 2.5rem;
     color:var(--black-color);
-    animation:slidedown .5s ease;
+    animation:slidedown 1s ease forwards;
+    animation-delay: .5s;
+    opacity:0;
 }
 
 .home-content h3{
     color:var(--black-color);
     font-size: 2rem;
-    animation:slideright .7s ease;
+    opacity:0;
+    animation:slideright 1s ease forwards;
+    animation-delay: .7s;
 }
 
 
@@ -183,18 +220,26 @@ nav{
     text-shadow: 1px 1px var(--black-color);
     font-size: 2.5rem;
     margin-left:5px;
+    animation:slidedown 1s ease forwards;
+    animation-delay: .5s;
+    opacity:0;
 }
 
 .home-content p{
     color:var(--black-color);
     font-size:1.3rem;
-    animation:slidetop .8s ease;
+    animation:slidetop 1s ease forwards;
+    opacity:0;
+    animation-delay: 1s;
 }
 
 .home-content .sprzedajemy{
     color:var(--blue-color);
     font-size: 2rem;
     min-height:40px;
+    opacity:0;
+    animation:slidetop 1s ease forwards;
+    animation-delay: .5s;
 }
 
 .home-img{
@@ -262,6 +307,20 @@ nav{
         opacity:1;
     }
 }
+
+@keyframes slideleft {
+    0%{
+        transform: translateX(100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+
+
+    
 
 
 /* =============== MEDAI QUERIES =============== */

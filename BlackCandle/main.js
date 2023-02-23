@@ -47,7 +47,7 @@ switchBtn.addEventListener('click', ()=> {
 
 
 var options = {
-    strings: ['Truskawkowe', 'Czekoladowe','Kawowe'],
+    strings: ['Truskawkowe', 'Czekoladowe','Kawowe','Mleczne'],
     typeSpeed: 100,
     backSpeed:100,
     loop:true,

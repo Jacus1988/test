@@ -21,18 +21,26 @@
     --blue-color:rgb(0, 172, 252);
     --white-color:rgb(255, 255, 255);
 }
+html{
+    transition :all 1s;
+}
 
 body{
     font-family: var(--main-font);
     font-size: 16px;
     cursor:default;
     transition:1s all ;
+    width:100%;
 }
 
 body.active{
    --white-color:black;
    --black-color:white;
    background-color: var(--white-color);
+}
+
+section{
+    min-height: 100vh;
 }
 
 /*  =========== Navigation ================= */
@@ -44,6 +52,7 @@ nav{
     position:fixed;
     width:100%;
     z-index: 999;
+    background-color: var(--white-color);
 }
 
 .logo{
@@ -70,6 +79,8 @@ nav{
     display:flex;
     list-style-type: none;
     z-index: 1;
+    background-color: var(--white-color);
+    border-radius: 10px;
 }
 
 .menu li{
@@ -81,7 +92,6 @@ nav{
     text-decoration: none;
     font-size: 1.5rem;
     transition:.5s ease-in-out;
-    text-shadow: 1px 1px var(--blue-color);
 }
 
 .menu li a.active , .menu li a:hover{
@@ -135,6 +145,64 @@ nav{
     background-color: var(--black-color)
 }
 
+/* ================= SECTION ABOUT ================= */
+
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.home-content{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    gap:10px;
+}
+
+.home-content h1{
+    display:flex;
+    font-size: 2.5rem;
+    color:var(--black-color);
+}
+
+.home-content h3{
+    color:var(--black-color);
+    font-size: 2rem;
+}
+
+
+.home-content h1 .candle{
+    color:var(--blue-color);
+    text-shadow: 1px 1px var(--black-color);
+    font-size: 2.5rem;
+    margin-left:5px;
+}
+
+.home-content p{
+    color:var(--black-color);
+    font-size:1.3rem;
+}
+
+.home-content .sprzedajemy{
+    color:var(--blue-color);
+    font-size: 2rem;
+    min-height:40px;
+}
+
+.home-img{
+    display:flex;
+    justify-content: center;
+    width:80%;
+    height:400px;
+}
+
+.home-img img{
+    object-fit: cover;
+    width:100%;
+    object-position: top;
+}
 /* =============== MEDAI QUERIES =============== */
 
 @media (max-width:750px){
@@ -161,5 +229,28 @@ nav{
     .menu li{
         padding:5px 0;
     }
+    .home{
+        flex-direction: column;
+    }
+    .home-content{
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap:30px;
+    }
+    .home-content h3{
+        font-size: 1.7rem;
+    }
+    .home-content p{
+        color:var(--black-color);
+        font-size:1.3rem;
+        text-align:center;
+        
+    }
+    .home-img{
+        width:100%;
+        height:300px;
+    }
+
 
 }

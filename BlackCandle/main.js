@@ -39,8 +39,22 @@ switchBtn.addEventListener('click', ()=> {
         dark.style.display = 'none';
         light.style.display = 'block';
         body.classList.add('active')
-
     }
+})
+
+/* =========== TYPED JS ================ */
+
+
+
+var options = {
+    strings: ['Truskawkowe', 'Czekoladowe','Kawowe'],
+    typeSpeed: 100,
+    backSpeed:100,
+    loop:true,
+    showCursor: false,
+};
+    
+  
+  var typed = new Typed('.sprzedajemy', options);
 
     
-})

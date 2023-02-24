@@ -102,3 +102,21 @@ var options = {
     arrow.addEventListener('click',()=>{
         window.scrollTo(0,0)
     })
+
+    /* ================SCROLL REVEAL================== */
+
+    ScrollReveal().reveal('.about-head,.contact-head' ,{
+        delay: 200,
+        duration: 700,
+        reset:true,
+        origin: 'top',
+        distance: '100px',
+    });
+
+    ScrollReveal().reveal('.container,.contact form' ,{
+        delay: 200,
+        duration: 700,
+        reset:true,
+        origin: 'bottom',
+        distance: '100px',
+    });

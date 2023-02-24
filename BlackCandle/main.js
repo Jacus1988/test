@@ -82,3 +82,10 @@ var options = {
             }
         })
     }
+
+    /* ========== SCROLL Up Arrow ================= */
+    const arrow = document.querySelector('.arrow-box')
+
+    arrow.addEventListener('click',()=>{
+        window.scrollTo(0,0)
+    })

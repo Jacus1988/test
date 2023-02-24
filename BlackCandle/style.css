@@ -310,6 +310,9 @@ nav{
 .about{
     padding-top: 80px;
     margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .about h1{
@@ -356,6 +359,76 @@ nav{
     padding-bottom: 25px;
 }
 
+/* ===============SECTION CONTACT============== */
+
+.contact{
+    padding-top: 80px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-head{
+    font-size: 2.8rem;
+    color:var(--blue-color);
+    text-align: center;
+}
+
+.contact-head span{
+    color:var(--black-color);
+}
+
+.contact form{
+    padding-top:30px;
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    gap:30px;
+}
+
+.form-column {
+    display: flex;
+    gap:20px;
+}
+
+.form-column input{
+    width:100%;
+    height:3rem;
+    border:3px solid var(--black-color);
+    border-radius: 10px;
+    padding:5px;
+    font-size: 2rem;
+    background-color: var(--blue-color);
+}
+
+.contact form textarea{
+    resize: none;
+    border:3px solid var(--black-color);
+    border-radius: 10px;
+    padding:5px;
+    font-size: 2rem;
+    background-color: var(--blue-color);
+}
+
+.contact form input[type="submit"]{
+    margin:0 auto;
+    height: 3rem;
+    width:300px;
+    background: linear-gradient(to right top,var(--blue-color),var(--white-color));
+    color:var(--black-color);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 3px var(--white-color);
+    font-family: var(--main-font);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    border:2px solid var(--black-color);
+    cursor:pointer;
+}
+
+
 /* ============== FOOTER ================= */
 
 footer{
@@ -376,6 +449,7 @@ footer .arrow-box{
     padding:10px;
     background-color: var(--blue-color);
     border-radius:5px;
+    cursor:pointer;
 }
 footer .bx-up-arrow-alt{
     font-size:2rem;
@@ -511,6 +585,12 @@ footer .bx-up-arrow-alt{
     }
     footer p{
         text-align: center;
+    }
+    .contact form{
+        padding-top:30px;
+    }
+    .form-column {
+        flex-direction: column;
     }
 
 }

@@ -33,17 +33,30 @@ const switchBtn = document.querySelector('.switch-light')
 const dark = document.querySelector('.bxs-moon')
 const light = document.querySelector('.bxs-sun')
 const body = document.querySelector('body')
+
+let darkMode = JSON.parse(localStorage.getItem('darkMode')) || false;
+if(darkMode){
+    dark.style.display = 'none';
+    light.style.display = 'block';
+    body.classList.add('active');
+}
+
 switchBtn.addEventListener('click', ()=> {
-    
-    
     if(dark.style.display === 'none'){
         light.style.display = "none"
         dark.style.display = "block"
         body.classList.remove('active')
-    }else{
+
+        darkMode = false;
+        localStorage.setItem('darkMode',JSON.stringify(darkMode))
+    }
+    else{
         dark.style.display = 'none';
         light.style.display = 'block';
         body.classList.add('active')
+
+      darkMode = true;
+      localStorage.setItem('darkMode',JSON.stringify(darkMode))
     }
 })
 

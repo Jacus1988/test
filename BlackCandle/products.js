@@ -4,56 +4,56 @@ const products = [
         name: 'Kokosanka',
         img:'./images/coco.webp',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'59 zł'
+        price:59,
     },
     {
         id:1,
         name:'Czekoladka',
         img:'./images/czekoladka1.jpg',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'49 zł'
+        price:49,
     },
     {
         id:2,
         name:'Truskaweczka',
         img:'./images/strawberry.jpg',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'39 zł',
+        price:39,
     },
     {
         id:3,
         name:'Mleczna',
         img:'./images/mleczna.jpg',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'39 zł',
+        price:39,
     },
     {
         id:4,
         name:'Owocowy Ice',
         img:'./images/owocowy_ice.jpg',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'59 zł',
+        price:59,
     },
     {
         id:5,
         name:'Ice Coffe',
         img:'./images/ice_coffe.jpg',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'49 zł'
+        price:49,
     },
     {
         id:6,
         name:'Black Coffe',
         img:'./images/black_cofe.jpg',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'49 zł',
+        price:39,
     },
     {
         id:7,
         name:'Bananowiec',
         img:'./images/bannanas.jpg',
         description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos?',
-        price:'39 zł',
+        price:39,
     },
 
 ];

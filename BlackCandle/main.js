@@ -75,10 +75,12 @@ var options = {
   
   var typed = new Typed('.sprzedajemy', options);
 
-    /* ============ SECTION SELECTOR ============== */
+     
 
+     /* ============ SECTION SELECTOR ============== */
+     
+     const links = document.querySelectorAll('.menu li a')
     const section = document.querySelectorAll('section')
-    const links = document.querySelectorAll('.menu li a')
 
     window.onscroll = () => {
         section.forEach((sec) => {
@@ -105,7 +107,7 @@ var options = {
 
     /* ================SCROLL REVEAL================== */
 
-    ScrollReveal().reveal('.about-head,.contact-head,.shop-head' ,{
+    ScrollReveal().reveal('.about-head,.contact-head' ,{
         delay: 200,
         duration: 700,
         reset:true,
@@ -121,16 +123,17 @@ var options = {
         distance: '100px',
     });
 
+  
+    
     /* ============== SHOP RENDERING =================== */
-
-
 
     function renderShop (){
         const shopSection = document.querySelector('.shop-products')
         products.forEach((item) => {
             const product = document.createElement('div')
             product.classList.add('item')
-            product.innerHTML = `<h3 class="item-title">${item.name}</h3>
+            product.innerHTML = `<div id="${item.id}"></div>
+            <h3 class="item-title">${item.name}</h3>
             <img src="${item.img}" alt="" class="item-img">
             <p class="item-description">${item.description}</p>
             <div class="item-star">
@@ -140,10 +143,55 @@ var options = {
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star-half' ></i>
             </div>
-            <p class="item-price">${item.price}</p>
+            <p class="item-price">${item.price} ZL</p>
             <button class="item-btn">Dodaj Do Koszyka</button>`
             shopSection.appendChild(product)
         })
+        addToBasket()
+    }
+    
+    renderShop()
+    
+    
+
+    
+    
+   
+
+    /* ========ADD TO BASKET ============== */
+
+    let productsBuyArray =[];
+    const basket = document.querySelector('.basket')
+
+    function addToBasket(){
+        const btn = document.querySelectorAll('.item-btn')
+
+        btn.forEach(btn => {
+            btn.addEventListener('click',() => {
+                const parent = btn.parentElement
+                productsBuyArray.push(parent)
+                basket.classList.add('active')
+                const basketNumber = document.querySelector('.basket-number')
+                basketNumber.style.display ="flex"
+                basketNumber.innerHTML = productsBuyArray.length
+            })
+        })
     }
 
-    renderShop()
+      /* ================== SHOP DISPLAY or NOT ================= */
+      const shop = document.querySelector('.shop')
+     
+      links.forEach(link => {
+          const shopLink = link.textContent
+          link.addEventListener('click',() => {
+          
+              if(shopLink === "Shop"){
+                  shop.style.display = "flex"
+                  basket.classList.add('active')
+                 }
+                 else{
+                  shop.style.display = "none"
+                  basket.classList.remove('active')
+              }
+             })
+          })

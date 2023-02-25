@@ -105,7 +105,7 @@ var options = {
 
     /* ================SCROLL REVEAL================== */
 
-    ScrollReveal().reveal('.about-head,.contact-head' ,{
+    ScrollReveal().reveal('.about-head,.contact-head,.shop-head' ,{
         delay: 200,
         duration: 700,
         reset:true,
@@ -120,3 +120,30 @@ var options = {
         origin: 'bottom',
         distance: '100px',
     });
+
+    /* ============== SHOP RENDERING =================== */
+
+
+
+    function renderShop (){
+        const shopSection = document.querySelector('.shop-products')
+        products.forEach((item) => {
+            const product = document.createElement('div')
+            product.classList.add('item')
+            product.innerHTML = `<h3 class="item-title">${item.name}</h3>
+            <img src="${item.img}" alt="" class="item-img">
+            <p class="item-description">${item.description}</p>
+            <div class="item-star">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half' ></i>
+            </div>
+            <p class="item-price">${item.price}</p>
+            <button class="item-btn">Dodaj Do Koszyka</button>`
+            shopSection.appendChild(product)
+        })
+    }
+
+    renderShop()

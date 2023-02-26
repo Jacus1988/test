@@ -535,7 +535,8 @@ nav{
 }
 
 .basket.active{
-    transform:translateX(0)
+    transform:translateX(0);
+    cursor:pointer;
 }
 
 .basket i{
@@ -562,6 +563,96 @@ nav{
     align-items: center;
     padding:10px;
     text-shadow: 1px 1px var(--white-color);
+}
+
+/* ================ PURCHASE CART ============== */
+
+.purchase-cart{
+    position:fixed;
+    top:55px;
+    left:0;
+    width:100vw;
+    height: 100%;
+    display:none;
+    z-index:2;
+    background: var(--white-color);
+    overflow-y: scroll;
+    margin-bottom: 50px;
+}
+
+.exit-btn{
+    position:absolute;
+    font-size: 3rem;
+    cursor:pointer;
+    top:1.5%;
+    right:1.5%;
+    font-weight: bold;
+    color:red;
+    background: none;
+    border:none;
+}
+
+.purchase-head{
+    font-size: 3rem;
+    padding:20px;
+    text-align: center;
+    color:var(--blue-color);
+    text-shadow: 1px 1px 2px var(--black-color);
+}
+
+.purchase-head span{
+    color:var(--black-color);
+    text-shadow: 1px 1px 2px var(--blue-color);
+}
+
+.purchase-cart-slots{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: space-between;
+}
+
+.purchase-item{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 10px;
+    width:95%;
+    margin:0 auto;
+    color:var(--black-color);
+    border:1px solid var(--black-color);
+    border-left: none;
+    border-right:none;
+}
+
+.purchase-item-img{
+    width:100px;
+    height:100px;
+    border:2px solid var(--black-color);
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.purchase-item-name, .purchase-item-quantity,.purchase-item-price{
+    font-size: 2.2rem;
+}
+
+.bxs-trash{
+    font-size:2.4rem;
+    color:red;
+    text-shadow: 1px 1px var(--black-color);
+    cursor:pointer
+}
+
+.purchase-result-div{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    padding:5px 20px;
+    font-size: 2.2rem;
+    color:var(--black-color);
+    margin-bottom: 100px;
 }
 /* ============== FOOTER ================= */
 
@@ -665,7 +756,7 @@ footer .bx-up-arrow-alt{
 
 /* =============== MEDAI QUERIES =============== */
 
-@media (max-width:750px){
+@media (max-width:762px){
     .hamburger{
         display:flex;
     }
@@ -725,6 +816,19 @@ footer .bx-up-arrow-alt{
     }
     .form-column {
         flex-direction: column;
+    }
+    .purchase-head{
+        font-size: 2rem;
+    }
+    .purchase-item-img{
+        width:50px;
+        height:50px;
+    }
+    .purchase-item-name, .purchase-item-quantity,.purchase-item-price,.purchase-result-div{
+        font-size: 1.2rem;
+    }
+    .bxs-trash{
+        font-size: 1.8rem;
     }
 
 }

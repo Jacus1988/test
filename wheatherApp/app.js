@@ -12,7 +12,7 @@ const box = document.querySelector('.box-content')
 
 serach.addEventListener('click',() => {
    const city = document.querySelector('.city').value
-   fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`).then(res => {
+   fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`).then(res => {
       res.json()
       .then(res => { 
          countries = {

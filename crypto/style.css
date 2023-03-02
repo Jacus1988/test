@@ -79,12 +79,24 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .result{
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     color:var(--black-color);
     color:var(--gold-color);
     text-shadow: 2px 2px 3px var(--black-color);
     min-height: 200px;
+    opacity:0;
+    transition:all 1s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.result.active{
+    opacity:1;
 }
 
 .buttons.up{

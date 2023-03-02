@@ -15,24 +15,33 @@ fetch(url)
     const btnEtherum = document.querySelector('.ethereum').addEventListener('click',() => {
         results(etherum)
     });
-    const btnLitecoin = document.querySelector('.litecoin').addEventListener('.click', () => {
+    const btnLitecoin = document.querySelector('.litecoin').addEventListener('click', () => {
         results(litecoin)
     })
     const btnDoge = document.querySelector('.dogecoin').addEventListener('click',() => {
         results(dogecoin)
     })
+    
 }));
 
 
 
 function results(x){
+    const summary = document.querySelector('.result')
     const input = document.querySelector('.input').value
+    summary.classList.remove('active')
     if(input === ""){
-        alert("nie ma nic")
+        alert("Wpisz ilość tokenów")
     }
     else{
         let result = input * x;
-        const summary = document.querySelector('.result')
-        summary.innerHTML = result + " USD"
+        if (/^\d+\.\d{4,}$/.test(result.toString())) {
+            summary.classList.add('active')
+            summary.innerHTML = result.toFixed(3) + " USD"
+        } else {
+            summary.classList.add('active')
+            summary.innerHTML = result + " USD"
+          }
+          console.log(summary);
     }
 }

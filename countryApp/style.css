@@ -33,11 +33,16 @@ body{
 .flag{
     width:150px;
     height:90px;
+    border:1px solid black;
 }
 
 .item span{
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+.item h1{
+    text-align: center;
 }
 
 .search{

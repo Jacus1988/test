@@ -190,10 +190,48 @@ header h1{
 }
 
 .opis span{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color:black;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+}
+
+/* ---------SECTION FIRMA--------------- */
+
+.firma {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background:linear-gradient(to right,white , gray , rgb(53, 52, 52));
+    padding:20px 30px;
+}
+
+.firma img{
+    border-radius: 20px;
+    border:3px solid var(--color-one);
+    margin:10px;
+    width:100%;
+}
+
+.firma-info{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+ 
+.firma-info h1{
+    font-size: 2.5rem;
+    font-style: italic;
+    color:var(--color-one);
+    text-shadow: 1px 1px black;
+    padding:30px;
+}
+
+.firma-info span{
+    font-size: 1.4rem;
+    color:black;
+    font-weight: bold;
+    text-align: left;
 }
 
 /* -------- MEDIA QUERIES ---------- */
@@ -221,6 +259,10 @@ header h1{
     .menu ul{
         display:none;
     }
+    .firma{
+        display:flex;
+        flex-direction: column;
+    }
 }
 @media (max-width:480px){
     .tittle{
@@ -237,4 +279,17 @@ header h1{
     .opis span{
         font-size: 1rem;
     }
+    .firma{
+        display:flex;
+        flex-direction: column;
+    }
+    .firma-info h1{
+        font-size:1.5rem;
+    }
+     .firma-info span{
+        font-size :1rem;
+     }   
+     .firma img{
+        margin:0;
+     }
 }
